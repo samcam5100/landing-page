@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Guide to GLP-1 Weight Management | Defiant Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0A1E2E; --navy:#1c3a52; --primary:#2563B0; --primary-deep:#1E5196;
+    --cream:#F4F1EC; --cream-line:#e7e0d6; --line:#e4e7ec; --ink:#16242f;
+    --display:"Plus Jakarta Sans",system-ui,sans-serif; --body:"Plus Jakarta Sans",system-ui,sans-serif;
+    --wordmark:"Cormorant Garamond",Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:#dfe3e8;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;padding:30px 16px}
+  .wordmark{font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.18em;font-weight:600}
+
+  .doc{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:26px}
+  .page{background:#fff;border-radius:6px;box-shadow:0 18px 50px -24px rgba(10,30,46,.55);overflow:hidden;position:relative;min-height:980px;display:flex;flex-direction:column}
+  .page-inner{padding:64px 60px;flex:1;display:flex;flex-direction:column}
+  @media(max-width:640px){.page-inner{padding:40px 28px}.page{min-height:auto}}
+
+  /* running header / footer */
+  .rh{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-bottom:40px}
+  .rh .wm{font-family:var(--wordmark);font-size:.95rem;letter-spacing:.16em;color:var(--navy-deep)}
+  .pf{margin-top:auto;padding-top:34px;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:#94a0ab;border-top:1px solid var(--line)}
+  .pf .wm{font-family:var(--wordmark);letter-spacing:.16em;text-transform:uppercase;color:#b6bec6}
+
+  h1,h2,h3,h4{font-family:var(--display);color:var(--navy-deep);line-height:1.12;letter-spacing:-.02em}
+  .eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--primary);font-weight:700;margin-bottom:16px}
+  h2.section{font-size:2.1rem;font-weight:800;margin-bottom:8px}
+  .lede{font-size:1.12rem;color:var(--navy);margin:14px 0 26px;font-weight:500}
+  p{font-size:1.02rem;color:#33414c;margin-bottom:15px}
+  .body-h{font-size:1.2rem;font-weight:700;margin:24px 0 6px;color:var(--navy-deep)}
+
+  /* cover */
+  .cover{background:radial-gradient(120% 90% at 80% 0%,#1a4576 0%,#0A1E2E 60%);color:#fff;justify-content:space-between}
+  .cover .page-inner{padding:70px 60px}
+  .cover .wm-top{font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:1.25rem;color:#fff}
+  .cover .tag{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:#8fc0ef;font-weight:700;margin-top:10px}
+  .cover-mid{margin:auto 0}
+  .cover h1{color:#fff;font-size:3.3rem;font-weight:800;line-height:1.05;margin-bottom:20px}
+  @media(max-width:640px){.cover h1{font-size:2.3rem}}
+  .cover .sub{font-size:1.18rem;color:#cfe0f2;max-width:460px;font-weight:500}
+  .cover .pill{display:inline-flex;align-items:center;gap:8px;margin-top:32px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:10px 18px;border-radius:999px;font-size:.9rem;font-weight:600;color:#fff}
+  .cover .footnote{font-size:.82rem;color:#9fb4c9;border-top:1px solid rgba(255,255,255,.15);padding-top:20px}
+
+  /* TOC */
+  .toc{list-style:none;display:grid;gap:2px;margin-top:10px}
+  .toc li{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .toc .n{font-family:var(--display);font-weight:800;color:var(--primary);font-size:1.05rem;min-width:30px}
+  .toc .t{font-weight:600;color:var(--navy-deep);font-size:1.08rem}
+
+  /* callout */
+  .callout{background:var(--cream);border-radius:14px;padding:22px 24px;margin:22px 0;border-left:4px solid var(--primary)}
+  .callout h4{font-size:1.05rem;margin-bottom:6px}
+  .callout p{margin:0;font-size:.98rem;color:var(--navy)}
+
+  /* checklist */
+  .checks{list-style:none;display:grid;gap:12px;margin:16px 0 8px}
+  .checks li{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;color:#33414c}
+  .checks svg{flex-shrink:0;margin-top:3px}
+
+  /* steps */
+  .steps{display:grid;gap:14px;margin:18px 0}
+  .step{display:flex;gap:16px;align-items:flex-start;background:#fbfaf8;border:1px solid var(--cream-line);border-radius:14px;padding:18px 20px}
+  .step .sn{flex-shrink:0;width:34px;height:34px;border-radius:50%;background:var(--navy-deep);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:1rem}
+  .step h4{font-size:1.08rem;margin-bottom:3px}
+  .step p{margin:0;font-size:.96rem}
+  .step .when{font-size:.78rem;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-top:6px;display:inline-block}
+
+  /* two-up tips */
+  .tips{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+  @media(max-width:640px){.tips{grid-template-columns:1fr}}
+  .tip{background:#fbfaf8;border:1px solid var(--cream-line);border-radius:14px;padding:20px}
+  .tip h4{font-size:1.05rem;margin-bottom:6px}
+  .tip p{margin:0;font-size:.95rem}
+
+  /* CTA page */
+  .cta{background:radial-gradient(120% 90% at 20% 0%,#1a4576 0%,#0A1E2E 65%);color:#fff}
+  .cta h2{color:#fff;font-size:2.3rem;font-weight:800}
+  .cta p{color:#cfe0f2;font-size:1.08rem}
+  .cta .why{list-style:none;display:grid;gap:12px;margin:24px 0}
+  .cta .why li{display:flex;gap:12px;align-items:flex-start;color:#eaf2fb;font-size:1.04rem}
+  .cta .why svg{flex-shrink:0;margin-top:3px}
+  .cta .btn{display:inline-block;background:#fff;color:var(--navy-deep);font-weight:700;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:1.05rem;margin-top:8px}
+  .cta .contact{margin-top:30px;border-top:1px solid rgba(255,255,255,.18);padding-top:22px;font-size:.96rem;color:#cfe0f2}
+  .cta .contact b{color:#fff}
+
+  .disc{font-size:.8rem;color:#8a96a1;line-height:1.5;margin-top:18px}
+  .print-tip{max-width:760px;margin:0 auto 22px;font-size:.85rem;color:#5a6772;text-align:center}
+  @media print{body{background:#fff;padding:0}.page{box-shadow:none;border-radius:0;page-break-after:always}.print-tip{display:none}.doc{gap:0}}
+</style>
+</head>
+<body>
+
+<div class="print-tip">Guide preview, 8 pages. This is a mockup of the lead magnet sent to people who request it.</div>
+
+<div class="doc">
+
+  <!-- COVER -->
+  <section class="page cover">
+    <div class="page-inner">
+      <div>
+        <div class="wm-top">Defiant Health</div>
+        <div class="tag">Medical Weight Management</div>
+      </div>
+      <div class="cover-mid">
+        <h1>Your Guide to GLP-1 Weight Management</h1>
+        <div class="sub">What these medications are, how care works, and how to decide if it is right for you.</div>
+        <span class="pill">A free resource from our care team in Lisle, IL</span>
+      </div>
+      <div class="footnote">This guide is for general education and is not medical advice. A licensed provider determines whether any treatment is appropriate for you.</div>
+    </div>
+  </section>
+
+  <!-- WELCOME + TOC -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Welcome</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">Start here</div>
+      <h2 class="section">A clear, honest place to begin</h2>
+      <p class="lede">If you have been curious about GLP-1 medications for weight loss, you have probably also run into a lot of noise. This short guide gives you the essentials in plain language, with no hype and no pressure.</p>
+      <p>We built our program around real, in-person care from a local team, not a faceless subscription. Whether you move forward with us or not, our goal here is simply to help you understand your options so you can make a confident decision.</p>
+      <p class="body-h">What is inside</p>
+      <ul class="toc">
+        <li><span class="n">1</span><span class="t">What GLP-1 medications are and how they work</span></li>
+        <li><span class="n">2</span><span class="t">What to expect from the process</span></li>
+        <li><span class="n">3</span><span class="t">Eating well while on treatment</span></li>
+        <li><span class="n">4</span><span class="t">Managing common side effects</span></li>
+        <li><span class="n">5</span><span class="t">Questions to ask your provider</span></li>
+        <li><span class="n">6</span><span class="t">Why a local clinic, and how to start</span></li>
+      </ul>
+      <div class="pf"><span class="wm">Defiant Health</span><span>1</span></div>
+    </div>
+  </section>
+
+  <!-- 1: HOW THEY WORK -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Section 1</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">The basics</div>
+      <h2 class="section">What GLP-1 medications are</h2>
+      <p class="lede">GLP-1 is a hormone your body naturally releases after you eat. It helps signal fullness and supports steady blood sugar.</p>
+      <p>GLP-1 medications work with that same signal. Used as part of a medically supervised plan, they can help reduce appetite and support portion control, which makes it easier to sustain the changes that lead to weight loss.</p>
+      <p class="body-h">A few things they are not</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>They are not a quick fix. They work best alongside nutrition and activity.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>They are not one size fits all. Your plan and dose are tailored to you.</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>They are not for everyone. A provider reviews your history first.</span></li>
+      </ul>
+      <div class="callout">
+        <h4>What the research shows</h4>
+        <p>In large clinical trials, GLP-1 based medications produced average body weight reductions of roughly 15 to 22 percent over the course of about a year and a half, alongside diet and activity. These are averages from studies, not a promise of any individual result.</p>
+      </div>
+      <div class="pf"><span class="wm">Defiant Health</span><span>2</span></div>
+    </div>
+  </section>
+
+  <!-- 2: WHAT TO EXPECT -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Section 2</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">The process</div>
+      <h2 class="section">What to expect</h2>
+      <p class="lede">Getting started is simple, and you are supported at every step.</p>
+      <div class="steps">
+        <div class="step"><span class="sn">1</span><div><h4>Complete your questionnaire</h4><p>Share your health history, goals, and current medications.</p><span class="when">About 5 minutes</span></div></div>
+        <div class="step"><span class="sn">2</span><div><h4>Clinical review</h4><p>Our team reviews your responses to determine potential eligibility.</p><span class="when">Within 2 business days</span></div></div>
+        <div class="step"><span class="sn">3</span><div><h4>Your personalized plan</h4><p>If appropriate, you receive recommendations built around your profile.</p><span class="when">Right after your review</span></div></div>
+        <div class="step"><span class="sn">4</span><div><h4>Ongoing support</h4><p>We adjust your plan and answer questions as you go.</p><span class="when">From day one</span></div></div>
+      </div>
+      <div class="callout"><h4>You stay in the driver seat</h4><p>There is no obligation to start treatment. The review simply tells you whether a program could be a fit, and what your provider would suggest.</p></div>
+      <div class="pf"><span class="wm">Defiant Health</span><span>3</span></div>
+    </div>
+  </section>
+
+  <!-- 3: EATING WELL -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Section 3</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">Nutrition</div>
+      <h2 class="section">Eating well while on treatment</h2>
+      <p class="lede">Because your appetite is lower, the food you do eat matters more. A few simple habits go a long way.</p>
+      <div class="tips">
+        <div class="tip"><h4>Prioritize protein</h4><p>Including protein at each meal helps protect muscle while you lose weight.</p></div>
+        <div class="tip"><h4>Stay hydrated</h4><p>Keep water nearby through the day. It also helps with common side effects.</p></div>
+        <div class="tip"><h4>Add fiber</h4><p>Vegetables, fruit, and whole grains support digestion and help you feel satisfied.</p></div>
+        <div class="tip"><h4>Eat slowly</h4><p>Smaller, slower meals are easier to tolerate. Stop when you feel comfortable.</p></div>
+      </div>
+      <div class="callout"><h4>Coaching is part of the plan</h4><p>You do not have to figure this out alone. Our team offers nutrition and lifestyle guidance tailored to your routine.</p></div>
+      <div class="pf"><span class="wm">Defiant Health</span><span>4</span></div>
+    </div>
+  </section>
+
+  <!-- 4: SIDE EFFECTS -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Section 4</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">What to know</div>
+      <h2 class="section">Managing common side effects</h2>
+      <p class="lede">Most side effects are mild and tend to ease as your body adjusts and your dose is increased slowly.</p>
+      <p class="body-h">Nausea</p>
+      <p>The most common early effect. Smaller meals, eating slowly, bland foods, and staying hydrated often help, and it usually improves with time.</p>
+      <p class="body-h">Digestive changes</p>
+      <p>Some people notice constipation or other changes. Fiber, fluids, and gentle movement can help.</p>
+      <p class="body-h">Start low, go slow</p>
+      <p>Your provider begins at a low dose and increases gradually. This is the biggest reason side effects tend to stay manageable.</p>
+      <div class="callout"><h4>When to reach out</h4><p>Contact your provider if side effects are severe or do not improve. Seek care right away for severe abdominal pain or signs of an allergic reaction.</p></div>
+      <div class="pf"><span class="wm">Defiant Health</span><span>5</span></div>
+    </div>
+  </section>
+
+  <!-- 5: QUESTIONS -->
+  <section class="page">
+    <div class="page-inner">
+      <div class="rh"><span>Section 5</span><span class="wm">Defiant Health</span></div>
+      <div class="eyebrow">Be prepared</div>
+      <h2 class="section">Questions to ask your provider</h2>
+      <p class="lede">A good consultation is a conversation. Here are questions worth bringing.</p>
+      <ul class="checks">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Based on my health history, is a GLP-1 program a reasonable option for me?</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>What medication and dose would you recommend, and why?</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>What side effects should I watch for, and how do we manage them?</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>How will we track my progress, and how often will we check in?</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>What does the full cost look like, and what is included?</span></li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>What happens if I want to pause, switch, or stop?</span></li>
+      </ul>
+      <div class="callout"><h4>Bring your full history</h4><p>Tell your provider about all medications and conditions. It helps them keep your care safe and tailored to you.</p></div>
+      <div class="pf"><span class="wm">Defiant Health</span><span>6</span></div>
+    </div>
+  </section>
+
+  <!-- 6: CTA -->
+  <section class="page cta">
+    <div class="page-inner">
+      <div class="rh" style="color:#8fc0ef"><span>Start here</span><span class="wm" style="color:#fff">Defiant Health</span></div>
+      <div class="eyebrow" style="color:#8fc0ef">Why a local clinic</div>
+      <h2 class="section">Care you can actually walk into</h2>
+      <p>We are a real clinic with a real care team in Lisle, not a mail-order subscription. That means a relationship, in-person options, and people who know your name.</p>
+      <ul class="why">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fc0ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A local, named care team that follows your progress</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fc0ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>In-person visits, plus recovery and wellness services on site</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#8fc0ef" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Ongoing support and coaching, not just a prescription</span></li>
+      </ul>
+      <a class="btn" href="https://defianthealth.io">See if you qualify</a>
+      <div class="contact">
+        <b>Defiant Health</b><br>
+        5100 Lincoln Ave, Lisle, IL 60532<br>
+        877 777 7647 &nbsp;&middot;&nbsp; defianthealth.io
+        <p class="disc" style="color:#9fb4c9">This guide is for general education and is not medical advice. Individual results vary and are not guaranteed. GLP-1 treatment is appropriate only when determined by a licensed provider. Some medications referenced may be compounded. Retatrutide is investigational and not FDA approved.</p>
+      </div>
+      <div class="pf" style="border-color:rgba(255,255,255,.18)"><span class="wm" style="color:#7e93a8">Defiant Health</span><span style="color:#7e93a8">7</span></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
