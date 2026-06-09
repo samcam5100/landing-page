@@ -716,6 +716,11 @@
   /* nav tab words: black */
   .va-topbar .va-tab,.va-tab{color:#0a0a0a}
   .va-tab:hover,.va-tab.is-active{color:#000}
+  .va-chip-note{font-size:.8rem;color:var(--navy);opacity:.62;margin-top:10px;line-height:1.4}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-login{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy-deep);text-decoration:none;white-space:nowrap}
+  .nav-login:hover{color:var(--primary)}
+  @media(max-width:520px){.nav-login{font-size:.74rem}}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1034,14 +1039,14 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand" id="brandName">Defiant <span>Health</span></a>
-    <button type="button" class="nav-cta" data-cta="header">Get Started</button>
+    <div class="nav-right"><a href="#" id="memberLogin" class="nav-login">Member login</a><button type="button" class="nav-cta" data-cta="header">Get Started</button></div>
   </div>
   <div class="va-topbar"><div class="wrap"><nav class="va-tabs" aria-label="Sections">
     <a href="how-it-works.html" class="va-tab">How it works</a>
     <a href="treatments.html" class="va-tab is-active">Treatments</a>
     <a href="the-science.html" class="va-tab">The Science</a>
-    <a href="faq.html" class="va-tab">FAQ</a>
     <a href="learn.html" class="va-tab">Learn</a>
+    <a href="faq.html" class="va-tab">FAQ</a>
   </nav></div></div>
 </header>
 <main id="top">
@@ -1058,7 +1063,8 @@
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-45 12 12)" stroke="#2B6CB0" stroke-width="1.5"/><path d="M9 9l6 6" stroke="#2B6CB0" stroke-width="1.5"/></svg></span>
             <h4>GLP-1 medications</h4>
             <p>Prescription medications that may help support appetite regulation, portion control, and long-term weight management when clinically appropriate.</p>
-            <div class="va-chips"><span>Semaglutide</span><span>Tirzepatide</span></div>
+            <div class="va-chips"><span>Tirzepatide</span><span>Retatrutide</span><span>Semaglutide</span></div>
+            <p class="va-chip-note">Retatrutide is investigational and not yet FDA approved.</p>
           </div>
           <div class="va-trt-card">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L5 13h6l-1 9 8-12h-6l1-8z" stroke="#2B6CB0" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
