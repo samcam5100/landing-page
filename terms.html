@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="See if you may be a good candidate">
 <meta name="twitter:description" content="A simple, private way to see if a GLP-1 program may be right for you.">
 <meta name="twitter:image" content="https://defianthealth.io/og-glp1.jpg">
-<title>See If You're a Good Candidate</title>
+<title>Terms of Use | Defiant Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -66,6 +66,9 @@
     font-size: 1.06rem;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   body.modal-open { overflow: hidden; }
   /* ---- Intro offer popup ---- */
@@ -272,7 +275,7 @@
     text-decoration: none;
     white-space: nowrap;
   }
-  .brand span { font-weight: 500; }
+  .brand span { font-weight: 600; }
   .nav-cta {
     font-family: var(--body);
     font-size: 0.82rem;
@@ -708,7 +711,7 @@
     .reveal { opacity: 1; transform: none; }
   }
   /* ===== Header: bold larger tabs + non-clipping wordmark ===== */
-  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.05em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
+  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.2em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
   .nav{gap:18px}
   .va-topbar .va-tab{font-size:1.18rem;font-weight:700;padding:14px 20px;letter-spacing:-.01em}
   .va-tab{font-weight:700}
@@ -716,6 +719,29 @@
   /* nav tab words: black */
   .va-topbar .va-tab,.va-tab{color:#0a0a0a}
   .va-tab:hover,.va-tab.is-active{color:#000}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-login{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy-deep);text-decoration:none;white-space:nowrap}
+  .nav-login:hover{color:var(--primary)}
+  @media(max-width:520px){.nav-login{font-size:.74rem}}
+  /* ===== Mega footer ===== */
+  .va-footer{background:#0A1E2E;color:#9fb4c9;padding:64px 0 34px;margin-top:auto}
+  .va-footer-top{display:grid;grid-template-columns:1fr;gap:40px}
+  @media(min-width:880px){.va-footer-top{grid-template-columns:1.1fr 2fr}}
+  .va-footer-mark{font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.2em;color:#fff;font-size:1.4rem;font-weight:600;margin-bottom:14px}
+  .va-footer-brand p{font-size:.97rem;line-height:1.6;max-width:320px;margin-bottom:18px;color:#9fb4c9}
+  .va-footer-cta{color:#7fd6f0;font-weight:700;text-decoration:none}
+  .va-footer-cta:hover{color:#fff}
+  .va-footer-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(min-width:600px){.va-footer-cols{grid-template-columns:repeat(3,1fr)}}
+  .va-fcol h4{font-family:var(--display);color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:12px;letter-spacing:.02em}
+  .va-fcol a{display:block;color:#9fb4c9;text-decoration:none;font-size:.95rem;padding:6px 0;transition:color .2s}
+  .va-fcol a:hover{color:#fff}
+  .va-footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding-top:24px;font-size:.84rem;color:#7e93a8}
+  .va-footer-legal a{color:#9fb4c9;text-decoration:none;margin-left:18px}
+  .va-footer-legal a:first-child{margin-left:0}
+  .va-footer-legal a:hover{color:#fff}
+  @media(max-width:560px){.va-footer-legal a{margin-left:0;margin-right:16px;display:inline-block}}
+  .va-footer-disc{font-size:.77rem;color:#5f7488;margin-top:16px;line-height:1.5}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1034,37 +1060,90 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand" id="brandName">Defiant <span>Health</span></a>
-    <button type="button" class="nav-cta" data-cta="header">Get Started</button>
+    <div class="nav-right"><a href="#" id="memberLogin" class="nav-login">Member login</a><button type="button" class="nav-cta" data-cta="header">Get Started</button></div>
   </div>
   <div class="va-topbar"><div class="wrap"><nav class="va-tabs" aria-label="Sections">
     <a href="how-it-works.html" class="va-tab">How it works</a>
     <a href="treatments.html" class="va-tab">Treatments</a>
     <a href="the-science.html" class="va-tab">The Science</a>
-    <a href="faq.html" class="va-tab">FAQ</a>
     <a href="learn.html" class="va-tab">Learn</a>
+    <a href="faq.html" class="va-tab">FAQ</a>
   </nav></div></div>
 </header>
 <main id="top">
+<!-- DRAFT: starting legal template generated for Defiant Health. Must be reviewed and customized by a licensed Illinois healthcare attorney before publication. Not legal advice. -->
   <section class="va-sec"><div class="va-doc">
 <a class="back" href="index.html">&larr; Back to home</a>
 <h1>Terms of Use</h1>
-<p>[Placeholder. Replace with your finalized, attorney-reviewed Terms of Use before launch.]</p><h2>Use of this site</h2><p>[Describe acceptable use.]</p><h2>No medical advice</h2><p>This site is for information and screening only and does not provide medical advice or guarantee treatment.</p><h2>Limitation of liability</h2><p>[Insert standard terms.]</p><h2>Contact</h2><p>Questions can be directed to Defiant Health, 5100 Lincoln Ave, Lisle, IL 60532, 877-777-7647.</p>
-<div class="note">Placeholder document. This is not legal advice. Have your policies reviewed by a qualified attorney before publishing.</div>
+<p style="opacity:.6;font-size:.9rem;margin-bottom:26px">Last updated: [effective date]</p>
+<p>These Terms of Use govern your access to and use of the Defiant Health website and services. By using our site, you agree to these terms. If you do not agree, please do not use the site.</p>
+<h2>Eligibility</h2>
+<p>You must be at least 18 years old and located in a state where we offer services to use our services. Services may not be available in all locations.</p>
+<h2>Informational purpose, not medical advice</h2>
+<p>The content on this site is for general information and is not medical advice. Using the site, including completing a screening questionnaire, does not create a provider-patient relationship and is not a guarantee that any treatment will be offered or prescribed. A licensed provider determines what, if anything, is appropriate for you.</p>
+<h2>Screening and telehealth</h2>
+<p>Our screening tools help determine whether you may be a candidate for care. Any care, evaluation, or prescription is subject to review by a licensed provider and to our Telehealth Informed Consent. Not everyone will qualify.</p>
+<h2>Memberships and payment</h2>
+<p>Some services are offered through a paid membership. Membership fees, billing, renewal, cancellation, and refunds are described in our Membership and Billing Terms.</p>
+<h2>Acceptable use</h2>
+<p>You agree not to misuse the site, attempt to access it in unauthorized ways, submit false information, or use it for any unlawful purpose.</p>
+<h2>Intellectual property</h2>
+<p>The site and its content are owned by Defiant Health or its licensors and are protected by applicable laws. You may not reproduce or distribute our content without permission.</p>
+<h2>Disclaimers</h2>
+<p>The site is provided "as is" without warranties of any kind. We do not warrant that the site will be uninterrupted, error free, or free of harmful components, and we make no guarantee of any health outcome.</p>
+<h2>Limitation of liability</h2>
+<p>To the fullest extent permitted by law, Defiant Health is not liable for indirect, incidental, or consequential damages arising from your use of the site.</p>
+<h2>Governing law</h2>
+<p>These terms are governed by the laws of the State of Illinois, without regard to conflict of law principles.</p>
+<h2>Changes</h2>
+<p>We may update these terms from time to time. Continued use of the site means you accept the updated terms.</p>
+<h2>Contact</h2>
+<p>Questions about this document can be directed to Defiant Health, 5100 Lincoln Ave, Lisle, IL 60532, 877-777-7647, or through your patient portal.</p>
 </div></section>
 </main>
 <div class="va-sticky">
   <button type="button" class="btn btn-primary" data-cta="sticky">Start Questionnaire <span class="arrow">&rarr;</span></button>
 </div>
 <a class="va-textus" href="sms:8777777647" aria-label="Text us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 3V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Text us</a>
-<footer>
+<footer class="va-footer">
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand" id="footerBrand">Defiant Health</div>
-      <div class="footer-contact"><span id="footerAddress"></span> &nbsp;&middot;&nbsp; <a href="tel:8777777647" id="footerPhone"></a> &nbsp;&middot;&nbsp; <a href="https://defianthealth.io" id="footerSite"></a></div>
+    <div class="va-footer-top">
+      <div class="va-footer-brand">
+        <div class="va-footer-mark">Defiant Health</div>
+        <p>Medically guided weight loss, built around you. A concierge medical practice in Lisle, Illinois.</p>
+        <a class="va-footer-cta" href="index.html#start">Get started &rarr;</a>
+      </div>
+      <div class="va-footer-cols">
+        <div class="va-fcol">
+          <h4>Learn</h4>
+          <a href="learn.html">The new generation</a>
+          <a href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide</a>
+          <a href="learn-eating-on-glp1.html">What to eat on a GLP-1</a>
+          <a href="learn-glp1-side-effects.html">Managing side effects</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Tools</h4>
+          <a href="tools.html#bmi">BMI calculator</a>
+          <a href="tools.html#calories">Daily calories burned</a>
+          <a href="tools.html#deficit">Caloric deficit</a>
+          <a href="tools.html#protein">Protein calculator</a>
+          <a href="tools.html#water">Daily water intake</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Defiant Health</h4>
+          <a href="how-it-works.html">How it works</a>
+          <a href="treatments.html">Treatments</a>
+          <a href="the-science.html">The science</a>
+          <a href="faq.html">FAQ</a>
+          <a href="tel:8777777647">877 777 7647</a>
+        </div>
+      </div>
     </div>
-    <p class="disclaimer" id="footerDisclaimer"></p>
-    <p class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="telehealth-consent.html">Telehealth Consent</a> &middot; <a href="hipaa-notice.html">HIPAA Notice</a></p>
-    <p class="footer-legal"><span id="footerYear"></span> Defiant Health. All rights reserved. This page does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
+    <div class="va-footer-bottom">
+      <span>&copy; <span id="footerYear"></span> Defiant Health. 5100 Lincoln Ave, Lisle, IL 60532.</span>
+      <span class="va-footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="telehealth-consent.html">Telehealth Consent</a><a href="hipaa-notice.html">HIPAA Notice</a><a href="sms-terms.html">SMS Terms</a><a href="membership-terms.html">Billing</a></span>
+    </div>
+    <p class="va-footer-disc">This site does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
   </div>
 </footer>
 <!-- ============ POPUP / MODAL QUESTIONNAIRE ============ -->
