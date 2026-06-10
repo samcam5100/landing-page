@@ -66,6 +66,9 @@
     font-size: 1.06rem;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   body.modal-open { overflow: hidden; }
   /* ---- Intro offer popup ---- */
@@ -272,7 +275,7 @@
     text-decoration: none;
     white-space: nowrap;
   }
-  .brand span { font-weight: 500; }
+  .brand span { font-weight: 600; }
   .nav-cta {
     font-family: var(--body);
     font-size: 0.82rem;
@@ -708,7 +711,7 @@
     .reveal { opacity: 1; transform: none; }
   }
   /* ===== Header: bold larger tabs + non-clipping wordmark ===== */
-  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.05em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
+  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.2em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
   .nav{gap:18px}
   .va-topbar .va-tab{font-size:1.18rem;font-weight:700;padding:14px 20px;letter-spacing:-.01em}
   .va-tab{font-weight:700}
@@ -721,6 +724,55 @@
   .nav-login{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy-deep);text-decoration:none;white-space:nowrap}
   .nav-login:hover{color:var(--primary)}
   @media(max-width:520px){.nav-login{font-size:.74rem}}
+  /* ===== Mega footer ===== */
+  .va-footer{background:#0A1E2E;color:#9fb4c9;padding:64px 0 34px;margin-top:auto}
+  .va-footer-top{display:grid;grid-template-columns:1fr;gap:40px}
+  @media(min-width:880px){.va-footer-top{grid-template-columns:1.1fr 2fr}}
+  .va-footer-mark{font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.2em;color:#fff;font-size:1.4rem;font-weight:600;margin-bottom:14px}
+  .va-footer-brand p{font-size:.97rem;line-height:1.6;max-width:320px;margin-bottom:18px;color:#9fb4c9}
+  .va-footer-cta{color:#7fd6f0;font-weight:700;text-decoration:none}
+  .va-footer-cta:hover{color:#fff}
+  .va-footer-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(min-width:600px){.va-footer-cols{grid-template-columns:repeat(3,1fr)}}
+  .va-fcol h4{font-family:var(--display);color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:12px;letter-spacing:.02em}
+  .va-fcol a{display:block;color:#9fb4c9;text-decoration:none;font-size:.95rem;padding:6px 0;transition:color .2s}
+  .va-fcol a:hover{color:#fff}
+  .va-footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding-top:24px;font-size:.84rem;color:#7e93a8}
+  .va-footer-legal a{color:#9fb4c9;text-decoration:none;margin-left:18px}
+  .va-footer-legal a:first-child{margin-left:0}
+  .va-footer-legal a:hover{color:#fff}
+  @media(max-width:560px){.va-footer-legal a{margin-left:0;margin-right:16px;display:inline-block}}
+  .va-footer-disc{font-size:.77rem;color:#5f7488;margin-top:16px;line-height:1.5}
+  /* ===== Treatments additions (vt-*) ===== */
+  .vt-steps{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:760px){.vt-steps{grid-template-columns:repeat(4,1fr)}}
+  .vt-step{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .vt-step .n{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;font-weight:700;font-family:var(--display);margin-bottom:12px}
+  .vt-step h4{font-family:var(--display);font-weight:800;color:var(--navy-deep);font-size:1.08rem;margin-bottom:6px}
+  .vt-step p{font-size:.92rem;color:var(--navy);line-height:1.55;opacity:.85}
+  .vt-med{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+  .vt-med-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+  .vt-med-top h3{font-family:var(--display);font-weight:800;color:var(--navy-deep);font-size:1.3rem}
+  .vt-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .vt-badge.ok{background:rgba(37,99,176,.12);color:var(--primary-deep)}
+  .vt-badge.warn{background:#fbe7d2;color:#9a6a1f}
+  .vt-med-type{font-size:.86rem;font-weight:600;color:var(--primary-deep);margin-bottom:14px}
+  .vt-med-list{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-direction:column;gap:10px}
+  .vt-med-list li{position:relative;padding-left:22px;font-size:.92rem;color:var(--navy);line-height:1.5}
+  .vt-med-list li:before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--primary)}
+  .vt-med-link{margin-top:auto;font-weight:700;color:var(--primary);text-decoration:none;font-size:.92rem}
+  .vt-med-link:hover{color:var(--primary-deep)}
+  .vt-reviews{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
+  @media(min-width:760px){.vt-reviews{grid-template-columns:repeat(3,1fr)}}
+  .vt-review{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .vt-stars{color:#e0a92e;letter-spacing:2px;font-size:1rem;margin-bottom:10px}
+  .vt-review p{font-size:.95rem;color:var(--navy);line-height:1.6;font-style:italic;margin-bottom:12px}
+  .vt-review-name{font-weight:700;color:var(--navy-deep);font-size:.9rem}
+  .vt-trust-row{display:grid;grid-template-columns:1fr;gap:16px;background:var(--cream-light);border-radius:18px;padding:22px;margin-bottom:14px}
+  @media(min-width:680px){.vt-trust-row{grid-template-columns:repeat(3,1fr)}}
+  .vt-trust-row div{display:flex;flex-direction:column}
+  .vt-trust-row strong{font-family:var(--display);color:var(--navy-deep);font-size:1.05rem}
+  .vt-trust-row span{font-size:.9rem;color:var(--navy);opacity:.8}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1056,32 +1108,77 @@
         <div class="va-trt">
           <div class="va-trt-card">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21c5-3 8-6.5 8-11a4 4 0 00-8-1 4 4 0 00-8 1c0 4.5 3 8 8 11z" stroke="#2B6CB0" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 9v8" stroke="#2B6CB0" stroke-width="1.3" stroke-linecap="round"/></svg></span>
-            <h4>Lifestyle optimization</h4>
-            <p>Personalized nutrition guidance, activity recommendations, behavior modification strategies, and habit coaching.</p>
+            <h4>Nutrition and lifestyle</h4>
+            <p>One-on-one guidance on nutrition, movement, and the daily habits that protect your results.</p>
           </div>
           <div class="va-trt-card">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="6" rx="3" transform="rotate(-45 12 12)" stroke="#2B6CB0" stroke-width="1.5"/><path d="M9 9l6 6" stroke="#2B6CB0" stroke-width="1.5"/></svg></span>
-            <h4>GLP-1 medications</h4>
+            <h4>GLP-1 medication</h4>
             <p>Prescription medications that may help support appetite regulation, portion control, and long-term weight management when clinically appropriate.</p>
             <div class="va-chips"><span>Tirzepatide</span><span>Retatrutide</span><span>Semaglutide</span></div>
             <p class="va-chip-note">Retatrutide is investigational and not yet FDA approved.</p>
           </div>
           <div class="va-trt-card">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L5 13h6l-1 9 8-12h-6l1-8z" stroke="#2B6CB0" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
-            <h4>Metabolic health support</h4>
-            <p>Programs focused on improving overall metabolic function, energy levels, insulin sensitivity, and sustainable weight management.</p>
+            <h4>Progress and metabolic monitoring</h4>
+            <p>Regular monitoring of your progress and the metabolic markers that support safe, sustainable weight management.</p>
           </div>
           <div class="va-trt-card">
             <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="#2B6CB0" stroke-width="1.5"/><path d="M5 20c0-3.6 3.1-5.6 7-5.6s7 2 7 5.6" stroke="#2B6CB0" stroke-width="1.5" stroke-linecap="round"/><path d="M18 4l1 1 2-2" stroke="#2B6CB0" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <h4>Personalized care plans</h4>
+            <h4>A personalized care plan</h4>
             <p>Customized recommendations based on your questionnaire responses, health history, goals, and clinical review.</p>
           </div>
         </div>
         <p class="va-disc">Treatment options vary based on eligibility and clinical appropriateness. Completion of the questionnaire does not guarantee qualification for any treatment.</p>
-        <div class="va-cta-row"><button type="button" class="btn btn-primary" data-cta="treat_cta">See If You Qualify <span class="arrow">&rarr;</span></button></div>
+        <div class="va-cta-row"><button type="button" class="btn btn-primary" data-cta="treat_cta">See if you qualify <span class="arrow">&rarr;</span></button></div>
       </div>
   </div></section>
-  <section class="va-sec"><div class="wrap">
+    <section class="va-sec vt-steps-sec"><div class="wrap">
+    <div class="va-head reveal"><h2>How it works</h2><p>Getting started is simple, and most of it happens online, on your schedule.</p></div>
+    <div class="vt-steps">
+      <div class="vt-step reveal"><span class="n">1</span><h4>Answer a few questions</h4><p>Complete a short, secure health questionnaire about your goals and history.</p></div>
+      <div class="vt-step reveal"><span class="n">2</span><h4>A provider reviews</h4><p>A licensed provider reviews your information to see whether treatment is appropriate for you.</p></div>
+      <div class="vt-step reveal"><span class="n">3</span><h4>Get your plan</h4><p>If you qualify, you receive a personalized plan, and any medication is prescribed and arranged for you.</p></div>
+      <div class="vt-step reveal"><span class="n">4</span><h4>Ongoing care</h4><p>Your care team adjusts your dose, supports side effects, and checks in over time.</p></div>
+    </div>
+  </div></section>
+  <section class="va-sec vt-meds-sec"><div class="wrap">
+    <div class="va-head reveal"><h2>Your medication options</h2><p>If a GLP-1 is appropriate for you, these are the medications a provider may consider. Which one, if any, is right for you is a clinical decision made with your provider.</p></div>
+    <div class="va-grid3">
+      <div class="vt-med reveal">
+        <div class="vt-med-top"><h3>Tirzepatide</h3><span class="vt-badge ok">FDA approved</span></div>
+        <p class="vt-med-type">Dual agonist, GLP-1 and GIP</p>
+        <ul class="vt-med-list">
+          <li>Targets two appetite and metabolic pathways at once</li>
+          <li>Typically a once-weekly injection</li>
+          <li>In trials, an average body weight reduction of up to about 22 percent at the highest dose, alongside diet and activity. Individual results vary.</li>
+        </ul>
+        <a class="vt-med-link" href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide &rarr;</a>
+      </div>
+      <div class="vt-med reveal">
+        <div class="vt-med-top"><h3>Semaglutide</h3><span class="vt-badge ok">FDA approved</span></div>
+        <p class="vt-med-type">GLP-1 receptor agonist</p>
+        <ul class="vt-med-list">
+          <li>The most established GLP-1 for weight management</li>
+          <li>Typically a once-weekly injection</li>
+          <li>In trials, an average body weight reduction of about 15 percent at the highest dose, alongside diet and activity. Individual results vary.</li>
+        </ul>
+        <a class="vt-med-link" href="learn.html">How the GLP-1 generation works &rarr;</a>
+      </div>
+      <div class="vt-med reveal">
+        <div class="vt-med-top"><h3>Retatrutide</h3><span class="vt-badge warn">Investigational</span></div>
+        <p class="vt-med-type">Triple agonist, GLP-1, GIP, and glucagon</p>
+        <ul class="vt-med-list">
+          <li>An emerging next-generation option still in clinical trials</li>
+          <li>Not yet FDA approved and not generally available outside studies</li>
+          <li>In Phase 3 results shared in late 2025, an average reduction of roughly 28 percent at the highest dose. Individual results vary.</li>
+        </ul>
+        <a class="vt-med-link" href="learn-tirzepatide-vs-retatrutide.html">What makes it different &rarr;</a>
+      </div>
+    </div>
+    <p class="va-disc">Trial figures are averages from controlled studies that paired medication with a reduced-calorie diet and activity. They are not a prediction or guarantee of any individual result. Retatrutide is investigational and not FDA approved. A licensed provider determines whether any medication is appropriate for you.</p>
+  </div></section>
+<section class="va-sec"><div class="wrap">
     <div class="va-head reveal"><h2>Membership and pricing</h2><p>Simple and transparent. Your medication, if prescribed, is billed separately based on what your provider recommends.</p></div>
     <div class="va-grid2" style="align-items:stretch">
       <div class="va-price-card reveal"><div class="lbl">GLP-1 Program Membership</div><div class="amt">$<span>[price]</span> /mo</div><div class="sub">Starting rate. Edit to your actual pricing.</div><p>Includes your provider care, ongoing support, and program tools. Medication is prescribed and billed separately only if it is appropriate for you.</p></div>
@@ -1103,11 +1200,25 @@
       <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 12h16M4 7h10M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><h4>Personalized dosing</h4><p>Your plan is titrated and adjusted as your body responds over time.</p></div>
       <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>Side-effect support</h4><p>We help you manage common effects so you can stay comfortable and on track.</p></div>
       <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M7 3v8a3 3 0 0 0 6 0V3M10 11v10M17 3c-1.5 1-2 3-2 5s.5 4 2 5V3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>Coaching and nutrition</h4><p>One-on-one guidance on protein, movement, and habits that protect your results.</p></div>
-      <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-6 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9v10h12V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 19v-5h4v5" stroke="currentColor" stroke-width="1.6"/></svg></div><h4>In-person options</h4><p>Body composition, recovery, and wellness services at our Lisle clinic.</p></div>
+      <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 10l8-6 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 9v10h12V9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 19v-5h4v5" stroke="currentColor" stroke-width="1.6"/></svg></div><h4>Simple membership</h4><p>One monthly rate with no insurance approvals or surprise bills.</p></div>
       <div class="va-feat reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2 5 4-10 2 5h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4>Ongoing monitoring</h4><p>Regular check-ins to track your progress and keep your care safe.</p></div>
     </div>
   </div></section>
-  <section class="va-sec"><div class="wrap">
+    <section class="va-cred">
+    <div class="wrap va-cred-in">
+      <div class="reveal">
+        <h2>Your plan is guided by licensed providers</h2>
+        <p>This is not an algorithm or a call center. Your eligibility, your prescription, and your dose adjustments are reviewed and managed by licensed medical providers and a dedicated nurse injector who get to know you over time.</p>
+        <a class="vt-med-link" href="index.html#providers" style="color:#A9C8EC;display:inline-block;margin-top:8px">Meet your care team &rarr;</a>
+      </div>
+      <div class="va-cred-points reveal">
+        <div class="va-cred-pt"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#A9C8EC" stroke-width="1.6"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" stroke="#A9C8EC" stroke-width="1.6"/></svg></span><div><b>Licensed providers</b><span>Every prescription is reviewed by a licensed clinician.</span></div></div>
+        <div class="va-cred-pt"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M7 8h10M7 12h10M7 16h6" stroke="#A9C8EC" stroke-width="1.6" stroke-linecap="round"/></svg></span><div><b>A dedicated team</b><span>Message the same care team between visits, not a rotating queue.</span></div></div>
+        <div class="va-cred-pt"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#A9C8EC" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Ongoing oversight</b><span>Your dose and safety are monitored throughout your program.</span></div></div>
+      </div>
+    </div>
+  </section>
+<section class="va-sec"><div class="wrap">
     <div class="va-portal">
       <div class="va-portal-copy reveal">
         <h2>Track your progress in your member portal</h2>
@@ -1129,29 +1240,23 @@
       </div>
     </div>
   </div></section>
-  <section class="va-sec"><div class="wrap">
-    <div class="va-head reveal"><h2>Why a local clinic, not mail-order</h2><p>The difference between a relationship with a real care team and a subscription box.</p></div>
-    <div class="va-compare reveal">
-      <div class="crow chead"><div>&nbsp;</div><div class="us">Defiant Health</div><div>Mail-order telehealth</div></div>
-      <div class="crow"><div class="feat">A local, named care team</div><div class="us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div><div class="them">Rotating call center</div></div>
-      <div class="crow"><div class="feat">In-person visits available</div><div class="us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div><div class="them">Online only</div></div>
-      <div class="crow"><div class="feat">Recovery and wellness on site</div><div class="us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div><div class="them">Not offered</div></div>
-      <div class="crow"><div class="feat">A real relationship over time</div><div class="us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div><div class="them">Subscription box</div></div>
-      <div class="crow"><div class="feat">Online convenience</div><div class="us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div><div class="them"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Yes</div></div>
+  
+  
+    <section class="va-sec vt-proof-sec"><div class="wrap">
+    <div class="va-head reveal"><h2>What members say</h2><p>Real experiences from people in our program. Individual results vary.</p></div>
+    <div class="vt-reviews">
+      <div class="vt-review reveal"><div class="vt-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"[Add a real, consented patient quote here. Specific and honest works best, for example what surprised them about the level of support.]"</p><span class="vt-review-name">[First name, last initial]</span></div>
+      <div class="vt-review reveal"><div class="vt-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"[Add a second consented quote, ideally about the care team or how the check-ins kept them on track.]"</p><span class="vt-review-name">[First name, last initial]</span></div>
+      <div class="vt-review reveal"><div class="vt-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"[Add a third consented quote, ideally about how easy it was to get started or feeling supported.]"</p><span class="vt-review-name">[First name, last initial]</span></div>
     </div>
-  </div></section>
-  <section class="va-sec"><div class="wrap">
-    <div class="va-xsell reveal">
-      <h2>Care that goes beyond the medication</h2>
-      <p>Your weight-loss plan is part of a bigger picture. Members can add the recovery and wellness services we offer at our Lisle clinic.</p>
-      <div class="va-xsell-grid">
-        <div class="va-xsell-item"><h4>Hyperbaric oxygen</h4><p>Support recovery, energy, and overall wellness with HBOT sessions.</p></div>
-        <div class="va-xsell-item"><h4>Recovery and sauna</h4><p>Sauna and recovery services to complement your health goals.</p></div>
-        <div class="va-xsell-item"><h4>Aesthetics and wellness</h4><p>A full menu of aesthetic and functional treatments under one roof.</p></div>
-      </div>
+    <div class="vt-trust-row reveal">
+      <div><strong>Cancel anytime</strong><span>No long-term commitment.</span></div>
+      <div><strong>No insurance needed</strong><span>One simple monthly membership.</span></div>
+      <div><strong>Licensed providers</strong><span>Care from real clinicians.</span></div>
     </div>
+    <p class="va-disc">Testimonials reflect individual experiences and are not a guarantee of results. Quotes are published only with patient consent.</p>
   </div></section>
-  <section class="va-sec"><div class="wrap" style="max-width:940px">
+<section class="va-sec"><div class="wrap" style="max-width:940px">
     <div class="va-callout reveal"><h3>Already taking a GLP-1?</h3><p>You can transition your care to Defiant Health. Share your current treatment in the eligibility check and, in many cases, our providers can continue your plan without starting over.</p><button type="button" class="btn btn-primary" data-cta="switch">Transition my care <span class="arrow">&rarr;</span></button></div>
   </div></section>
 <section class="va-final" id="start">
@@ -1159,25 +1264,55 @@
       <div class="va-final-panel reveal">
         <h2 id="finalHeadline">Ready to find out?</h2>
         <p id="finalSub"></p>
-        <div class="va-final-actions"><button type="button" class="btn btn-primary" data-cta="final" id="finalCta">Check Eligibility <span class="arrow">&rarr;</span></button><a href="tel:8777777647" class="btn btn-ghost">Talk to our team</a></div>
+        <div class="va-final-actions"><button type="button" class="btn btn-primary" data-cta="final" id="finalCta">See if you qualify <span class="arrow">&rarr;</span></button><a href="tel:8777777647" class="btn btn-ghost">Talk to our team</a></div>
         <p class="micro" id="finalMicro"></p>
       </div>
     </div>
   </section>
 </main>
 <div class="va-sticky">
-  <button type="button" class="btn btn-primary" data-cta="sticky">Start Questionnaire <span class="arrow">&rarr;</span></button>
+  <button type="button" class="btn btn-primary" data-cta="sticky">See if you qualify <span class="arrow">&rarr;</span></button>
 </div>
 <a class="va-textus" href="sms:8777777647" aria-label="Text us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 3V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Text us</a>
-<footer>
+<footer class="va-footer">
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand" id="footerBrand">Defiant Health</div>
-      <div class="footer-contact"><span id="footerAddress"></span> &nbsp;&middot;&nbsp; <a href="tel:8777777647" id="footerPhone"></a> &nbsp;&middot;&nbsp; <a href="https://defianthealth.io" id="footerSite"></a></div>
+    <div class="va-footer-top">
+      <div class="va-footer-brand">
+        <div class="va-footer-mark">Defiant Health</div>
+        <p>Medically guided weight loss, built around you. A concierge medical practice in Lisle, Illinois.</p>
+        <a class="va-footer-cta" href="index.html#start">Get started &rarr;</a>
+      </div>
+      <div class="va-footer-cols">
+        <div class="va-fcol">
+          <h4>Learn</h4>
+          <a href="learn.html">The new generation</a>
+          <a href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide</a>
+          <a href="learn-eating-on-glp1.html">What to eat on a GLP-1</a>
+          <a href="learn-glp1-side-effects.html">Managing side effects</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Tools</h4>
+          <a href="tools.html#bmi">BMI calculator</a>
+          <a href="tools.html#calories">Daily calories burned</a>
+          <a href="tools.html#deficit">Caloric deficit</a>
+          <a href="tools.html#protein">Protein calculator</a>
+          <a href="tools.html#water">Daily water intake</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Defiant Health</h4>
+          <a href="how-it-works.html">How it works</a>
+          <a href="treatments.html">Treatments</a>
+          <a href="the-science.html">The science</a>
+          <a href="faq.html">FAQ</a>
+          <a href="tel:8777777647">877 777 7647</a>
+        </div>
+      </div>
     </div>
-    <p class="disclaimer" id="footerDisclaimer"></p>
-    <p class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="telehealth-consent.html">Telehealth Consent</a> &middot; <a href="hipaa-notice.html">HIPAA Notice</a></p>
-    <p class="footer-legal"><span id="footerYear"></span> Defiant Health. All rights reserved. This page does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
+    <div class="va-footer-bottom">
+      <span>&copy; <span id="footerYear"></span> Defiant Health. 5100 Lincoln Ave, Lisle, IL 60532.</span>
+      <span class="va-footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="telehealth-consent.html">Telehealth Consent</a><a href="hipaa-notice.html">HIPAA Notice</a></span>
+    </div>
+    <p class="va-footer-disc">This site does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
   </div>
 </footer>
 <!-- ============ POPUP / MODAL QUESTIONNAIRE ============ -->
@@ -1394,7 +1529,7 @@ const CONFIG = {
     heroEyebrow:     "GLP-1 Weight Management",
     heroHeadline:    "A simpler way to see if you're a good candidate.",
     heroSub:         "We've launched a new online platform that makes it easy to answer a few questions and see whether a medically guided GLP-1 weight management program may be right for you. Reviewed by our licensed providers.",
-    heroCta:         "Start Questionnaire",
+    heroCta:         "See if you qualify",
     heroReassure:    "No waiting rooms, and no obligation to continue.",
 
     howHeadline:     "Four simple steps",
@@ -1405,7 +1540,7 @@ const CONFIG = {
 
     finalHeadline:   "Ready to find out?",
     finalSub:        "Answer a few quick questions and our team will review and follow up.",
-    finalCta:        "Check Eligibility",
+    finalCta:        "See if you qualify",
     finalMicro:      "For screening purposes only. Submitting does not guarantee eligibility, a prescription, or treatment.",
 
     modalTitle:      "GLP-1 Eligibility Questionnaire",
