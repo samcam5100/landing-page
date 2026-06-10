@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="See if you may be a good candidate">
 <meta name="twitter:description" content="A simple, private way to see if a GLP-1 program may be right for you.">
 <meta name="twitter:image" content="https://defianthealth.io/og-glp1.jpg">
-<title>See If You're a Good Candidate</title>
+<title>Privacy Policy | Defiant Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -66,6 +66,9 @@
     font-size: 1.06rem;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   body.modal-open { overflow: hidden; }
   /* ---- Intro offer popup ---- */
@@ -272,7 +275,7 @@
     text-decoration: none;
     white-space: nowrap;
   }
-  .brand span { font-weight: 500; }
+  .brand span { font-weight: 600; }
   .nav-cta {
     font-family: var(--body);
     font-size: 0.82rem;
@@ -708,7 +711,7 @@
     .reveal { opacity: 1; transform: none; }
   }
   /* ===== Header: bold larger tabs + non-clipping wordmark ===== */
-  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.05em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
+  .brand{font-size:clamp(1.2rem,3vw,1.46rem);letter-spacing:.2em;flex-shrink:0;white-space:nowrap;overflow:visible;min-width:max-content}
   .nav{gap:18px}
   .va-topbar .va-tab{font-size:1.18rem;font-weight:700;padding:14px 20px;letter-spacing:-.01em}
   .va-tab{font-weight:700}
@@ -716,6 +719,29 @@
   /* nav tab words: black */
   .va-topbar .va-tab,.va-tab{color:#0a0a0a}
   .va-tab:hover,.va-tab.is-active{color:#000}
+  .nav-right{display:flex;align-items:center;gap:16px}
+  .nav-login{font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy-deep);text-decoration:none;white-space:nowrap}
+  .nav-login:hover{color:var(--primary)}
+  @media(max-width:520px){.nav-login{font-size:.74rem}}
+  /* ===== Mega footer ===== */
+  .va-footer{background:#0A1E2E;color:#9fb4c9;padding:64px 0 34px;margin-top:auto}
+  .va-footer-top{display:grid;grid-template-columns:1fr;gap:40px}
+  @media(min-width:880px){.va-footer-top{grid-template-columns:1.1fr 2fr}}
+  .va-footer-mark{font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.2em;color:#fff;font-size:1.4rem;font-weight:600;margin-bottom:14px}
+  .va-footer-brand p{font-size:.97rem;line-height:1.6;max-width:320px;margin-bottom:18px;color:#9fb4c9}
+  .va-footer-cta{color:#7fd6f0;font-weight:700;text-decoration:none}
+  .va-footer-cta:hover{color:#fff}
+  .va-footer-cols{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(min-width:600px){.va-footer-cols{grid-template-columns:repeat(3,1fr)}}
+  .va-fcol h4{font-family:var(--display);color:#fff;font-size:1.05rem;font-weight:700;margin-bottom:12px;letter-spacing:.02em}
+  .va-fcol a{display:block;color:#9fb4c9;text-decoration:none;font-size:.95rem;padding:6px 0;transition:color .2s}
+  .va-fcol a:hover{color:#fff}
+  .va-footer-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.12);margin-top:46px;padding-top:24px;font-size:.84rem;color:#7e93a8}
+  .va-footer-legal a{color:#9fb4c9;text-decoration:none;margin-left:18px}
+  .va-footer-legal a:first-child{margin-left:0}
+  .va-footer-legal a:hover{color:#fff}
+  @media(max-width:560px){.va-footer-legal a{margin-left:0;margin-right:16px;display:inline-block}}
+  .va-footer-disc{font-size:.77rem;color:#5f7488;margin-top:16px;line-height:1.5}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1034,37 +1060,90 @@
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand" id="brandName">Defiant <span>Health</span></a>
-    <button type="button" class="nav-cta" data-cta="header">Get Started</button>
+    <div class="nav-right"><a href="#" id="memberLogin" class="nav-login">Member login</a><button type="button" class="nav-cta" data-cta="header">Get Started</button></div>
   </div>
   <div class="va-topbar"><div class="wrap"><nav class="va-tabs" aria-label="Sections">
     <a href="how-it-works.html" class="va-tab">How it works</a>
     <a href="treatments.html" class="va-tab">Treatments</a>
     <a href="the-science.html" class="va-tab">The Science</a>
-    <a href="faq.html" class="va-tab">FAQ</a>
     <a href="learn.html" class="va-tab">Learn</a>
+    <a href="faq.html" class="va-tab">FAQ</a>
   </nav></div></div>
 </header>
 <main id="top">
+<!-- DRAFT: starting legal template generated for Defiant Health. Must be reviewed and customized by a licensed Illinois healthcare attorney before publication. Not legal advice. -->
   <section class="va-sec"><div class="va-doc">
 <a class="back" href="index.html">&larr; Back to home</a>
 <h1>Privacy Policy</h1>
-<p>[Placeholder. Replace with your finalized, attorney-reviewed Privacy Policy before launch.]</p><h2>Information we collect</h2><p>[Describe the information you collect and how.]</p><h2>How we use information</h2><p>[Describe how information is used and shared.]</p><h2>Your choices</h2><p>[Describe opt-out and data rights.]</p><h2>Contact</h2><p>Questions can be directed to Defiant Health, 5100 Lincoln Ave, Lisle, IL 60532, 877-777-7647.</p>
-<div class="note">Placeholder document. This is not legal advice. Have your policies reviewed by a qualified attorney before publishing.</div>
+<p style="opacity:.6;font-size:.9rem;margin-bottom:26px">Last updated: [effective date]</p>
+<p>Defiant Health ("we," "us," or "our") respects your privacy. This Privacy Policy explains how we collect, use, and share information when you visit our website or contact us. Health information you share as a patient is also protected under our Notice of Privacy Practices, described below.</p>
+<h2>Information we collect</h2>
+<p>We collect information you provide directly, such as your name, email address, phone number, and any details you submit through our forms or screening questionnaire. We also automatically collect limited technical information such as your device type, browser, and pages visited, through cookies and similar technologies.</p>
+<h2>How we use your information</h2>
+<p>We use your information to respond to your inquiries, determine whether our services may be appropriate for you, provide and improve our services, and, with your consent, send you updates and offers. We do not sell your personal information.</p>
+<h2>How we share information</h2>
+<p>We share information with service providers who help us operate, such as scheduling, communications, and payment vendors, under agreements that limit their use of your information. Where these vendors may handle protected health information, we require appropriate safeguards. We may also disclose information when required by law.</p>
+<h2>Cookies, analytics, and advertising</h2>
+<p>We use cookies and analytics to understand how our site is used. We may use advertising tools to reach people who may benefit from our services. We take care not to share information that identifies you together with sensitive health details through these tools. You can control cookies through your browser settings.</p>
+<h2>Text messages and email</h2>
+<p>If you provide your phone number or email and opt in, we may contact you by text or email. You can opt out of texts by replying STOP and unsubscribe from emails using the link in any message. See our SMS Terms for details.</p>
+<h2>Data security</h2>
+<p>We use reasonable administrative, technical, and physical safeguards to protect your information. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
+<h2>Your choices and rights</h2>
+<p>You may request access to, correction of, or deletion of your personal information, and you may opt out of marketing communications, subject to applicable law. To make a request, contact us using the details below.</p>
+<h2>Protected health information</h2>
+<p>Information you provide as a patient that relates to your health, care, or payment for care is protected health information governed by our Notice of Privacy Practices and applicable law, which control over this Privacy Policy where they conflict.</p>
+<h2>Children</h2>
+<p>Our services are intended for adults 18 and older. We do not knowingly collect information from children.</p>
+<h2>Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time. The effective date above reflects the latest version.</p>
+<h2>Contact</h2>
+<p>Questions about this document can be directed to Defiant Health, 5100 Lincoln Ave, Lisle, IL 60532, 877-777-7647, or through your patient portal.</p>
 </div></section>
 </main>
 <div class="va-sticky">
   <button type="button" class="btn btn-primary" data-cta="sticky">Start Questionnaire <span class="arrow">&rarr;</span></button>
 </div>
 <a class="va-textus" href="sms:8777777647" aria-label="Text us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 3V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Text us</a>
-<footer>
+<footer class="va-footer">
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand" id="footerBrand">Defiant Health</div>
-      <div class="footer-contact"><span id="footerAddress"></span> &nbsp;&middot;&nbsp; <a href="tel:8777777647" id="footerPhone"></a> &nbsp;&middot;&nbsp; <a href="https://defianthealth.io" id="footerSite"></a></div>
+    <div class="va-footer-top">
+      <div class="va-footer-brand">
+        <div class="va-footer-mark">Defiant Health</div>
+        <p>Medically guided weight loss, built around you. A concierge medical practice in Lisle, Illinois.</p>
+        <a class="va-footer-cta" href="index.html#start">Get started &rarr;</a>
+      </div>
+      <div class="va-footer-cols">
+        <div class="va-fcol">
+          <h4>Learn</h4>
+          <a href="learn.html">The new generation</a>
+          <a href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide</a>
+          <a href="learn-eating-on-glp1.html">What to eat on a GLP-1</a>
+          <a href="learn-glp1-side-effects.html">Managing side effects</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Tools</h4>
+          <a href="tools.html#bmi">BMI calculator</a>
+          <a href="tools.html#calories">Daily calories burned</a>
+          <a href="tools.html#deficit">Caloric deficit</a>
+          <a href="tools.html#protein">Protein calculator</a>
+          <a href="tools.html#water">Daily water intake</a>
+        </div>
+        <div class="va-fcol">
+          <h4>Defiant Health</h4>
+          <a href="how-it-works.html">How it works</a>
+          <a href="treatments.html">Treatments</a>
+          <a href="the-science.html">The science</a>
+          <a href="faq.html">FAQ</a>
+          <a href="tel:8777777647">877 777 7647</a>
+        </div>
+      </div>
     </div>
-    <p class="disclaimer" id="footerDisclaimer"></p>
-    <p class="footer-links"><a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="telehealth-consent.html">Telehealth Consent</a> &middot; <a href="hipaa-notice.html">HIPAA Notice</a></p>
-    <p class="footer-legal"><span id="footerYear"></span> Defiant Health. All rights reserved. This page does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
+    <div class="va-footer-bottom">
+      <span>&copy; <span id="footerYear"></span> Defiant Health. 5100 Lincoln Ave, Lisle, IL 60532.</span>
+      <span class="va-footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="telehealth-consent.html">Telehealth Consent</a><a href="hipaa-notice.html">HIPAA Notice</a><a href="sms-terms.html">SMS Terms</a><a href="membership-terms.html">Billing</a></span>
+    </div>
+    <p class="va-footer-disc">This site does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
   </div>
 </footer>
 <!-- ============ POPUP / MODAL QUESTIONNAIRE ============ -->
