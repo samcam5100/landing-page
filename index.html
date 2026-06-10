@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="See if you may be a good candidate">
 <meta name="twitter:description" content="A simple, private way to see if a GLP-1 program may be right for you.">
 <meta name="twitter:image" content="https://defianthealth.io/og-glp1.jpg">
-<title>See If You're a Good Candidate</title>
+<title>Medical Weight Loss with GLP-1 | Defiant Health</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -835,6 +835,7 @@
   .va-footer-legal a:hover{color:#fff}
   @media(max-width:560px){.va-footer-legal a{margin-left:0;margin-right:16px;display:inline-block}}
   .va-footer-disc{font-size:.77rem;color:#5f7488;margin-top:16px;line-height:1.5}
+  .va-est-pct{font-size:.92rem;color:var(--cream-light);opacity:.82;margin-top:8px}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1149,7 +1150,7 @@
 
 </head>
 <body>
-<div class="va-promo" id="promoBar"><b>New patient intro offer:</b> your first month $100 off. <button type="button" data-cta="promo" style="background:none;border:none;color:#fff;text-decoration:underline;text-underline-offset:2px;font-weight:600;cursor:pointer;font-family:inherit;font-size:inherit">See if you qualify</button><button type="button" class="pclose" id="promoClose" aria-label="Dismiss">&times;</button></div>
+<div class="va-promo" id="promoBar"><b>Limited-time offer:</b> new patients get their first month $100 off. <button type="button" data-cta="promo" style="background:none;border:none;color:#fff;text-decoration:underline;text-underline-offset:2px;font-weight:600;cursor:pointer;font-family:inherit;font-size:inherit">See if you qualify</button><button type="button" class="pclose" id="promoClose" aria-label="Dismiss">&times;</button></div>
 <header>
   <div class="wrap nav">
     <a href="index.html" class="brand" id="brandName">Defiant <span>Health</span></a>
@@ -1173,7 +1174,7 @@
         <p class="sub" id="heroSub">Find out whether a GLP-1 program is right for you, then get ongoing care from a licensed team right here in Lisle. Start online, with no obligation.</p>
         <div class="va-hero-actions">
           <button type="button" class="btn btn-primary" data-cta="hero" id="heroCta">Start Questionnaire <span class="arrow">&rarr;</span></button>
-          <a href="tel:8777777647" class="btn btn-ghost">Talk to our team</a>
+          <a href="tel:8777777647" class="btn btn-ghost">Call 877-777-7647</a>
         </div>
         <div class="va-checks">
           <div class="va-check"><span class="tick"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2B6CB0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Care from licensed local providers</div>
@@ -1309,7 +1310,8 @@
       <div class="va-est-cur">Current weight: <span id="estCur">220 lbs</span></div>
       <div class="va-est-cap">Potential weight reduction range</div>
       <div class="va-est-out" id="estOut">22 to 44 <span>lbs</span></div>
-      <button type="button" class="btn btn-primary" data-cta="estimator">See if I qualify <span class="arrow">&rarr;</span></button>
+      <div class="va-est-pct">about 10 to 20 percent of your body weight</div>
+      <button type="button" class="btn btn-primary" data-cta="estimator">See if you qualify <span class="arrow">&rarr;</span></button>
       <p class="va-est-fine">Estimates reflect average results from clinical trials of GLP-1 medications combined with a reduced-calorie diet and exercise. They are not a prediction or guarantee of your results. Individual results vary, and a licensed provider determines whether treatment is appropriate for you.</p>
     </div>
   </div></section>
@@ -1384,7 +1386,7 @@
       <div class="va-final-panel reveal">
         <h2 id="finalHeadline">Ready to take the first step?</h2>
         <p id="finalSub"></p>
-        <div class="va-final-actions"><button type="button" class="btn btn-primary" data-cta="final" id="finalCta">Check Eligibility <span class="arrow">&rarr;</span></button><a href="tel:8777777647" class="btn btn-ghost">Talk to our team</a></div>
+        <div class="va-final-actions"><button type="button" class="btn btn-primary" data-cta="final" id="finalCta">Check Eligibility <span class="arrow">&rarr;</span></button><a href="tel:8777777647" class="btn btn-ghost">Call 877-777-7647</a></div>
         <p class="micro" id="finalMicro"></p>
       </div>
     </div>
@@ -1463,7 +1465,7 @@
       <span class="intro-eyebrow" id="introEyebrow"></span>
       <h2 class="intro-title" id="introTitle"></h2>
       <p class="intro-text" id="introText"></p>
-      <button type="button" class="btn btn-primary" id="introCta">See if I qualify <span class="arrow">&rarr;</span></button>
+      <button type="button" class="btn btn-primary" id="introCta">See if you qualify <span class="arrow">&rarr;</span></button>
       <button type="button" class="intro-dismiss" id="introDismiss"></button>
       <p class="intro-fine" id="introFine"></p>
     </div>
@@ -1657,7 +1659,7 @@ const CONFIG = {
     eyebrow: "New patient intro offer",
     title: "Your first month, $100 off",
     body: "Start a medically guided GLP-1 program at a special intro rate.",
-    cta: "See if I qualify",
+    cta: "See if you qualify",
     dismiss: "Maybe later",
     fine: "Eligibility determined by a licensed provider. Subject to terms. Not a guarantee of treatment."
   },
