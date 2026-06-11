@@ -77,7 +77,7 @@
   .intro-card{position:relative;background:var(--white);border-radius:22px;max-width:360px;width:100%;overflow:hidden;box-shadow:0 40px 90px -30px rgba(10,30,46,.6);transform:translateY(16px) scale(.98);opacity:0;transition:transform .35s ease,opacity .35s ease}
   .intro-overlay.open .intro-card{transform:none;opacity:1}
   .intro-top{height:4px;background:var(--primary)}
-  .intro-body{padding:26px 24px 22px;text-align:center}
+  .intro-body{padding:26px 24px 24px;text-align:center}
   .intro-eyebrow{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--primary);margin-bottom:9px}
   .intro-title{font-family:var(--display);font-size:1.45rem;font-weight:800;line-height:1.12;color:var(--navy-deep);margin-bottom:8px;letter-spacing:-.01em}
   .intro-text{font-size:.92rem;line-height:1.5;color:var(--navy);font-weight:400;margin-bottom:16px}
@@ -872,6 +872,22 @@
   .va-lab-phone img{display:block;width:100%;border-radius:34px}
   .va-lab-disc{text-align:center;color:var(--navy);opacity:.6;font-size:.8rem;line-height:1.5;margin:20px auto 0;max-width:640px}
   @media(max-width:760px){.va-lab-card{flex-direction:column;text-align:center;padding:34px}.va-lab-bul li{justify-content:center}}
+
+  /* Intro popup — GLP-1 guide colorway */
+  .intro-card{background:radial-gradient(120% 90% at 80% 0%,#1a4576 0%,#0A1E2E 60%)}
+  .intro-top{background:#8fc0ef}
+  .intro-wm{display:block;font-family:var(--wordmark);text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:1.05rem;color:#fff;margin-bottom:13px}
+  .intro-eyebrow{color:#8fc0ef}
+  .intro-title{color:#fff}
+  .intro-text{color:#cfe0f2;opacity:.96}
+  .intro-card #introCta{background:#fff;color:var(--navy-deep);border-color:#fff}
+  .intro-card #introCta:hover{background:#eaf2fb}
+  .intro-card #introCta .arrow{color:var(--navy-deep)}
+  .intro-dismiss{color:#9fb4c9;opacity:.85}
+  .intro-dismiss:hover{color:#cfe0f2;opacity:1}
+  .intro-fine{color:#9fb4c9;opacity:.72}
+  .intro-x{background:rgba(255,255,255,.12);color:#fff}
+  .intro-x:hover{background:rgba(255,255,255,.22);transform:rotate(90deg)}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1512,12 +1528,12 @@
     <button type="button" class="intro-x" id="introX" aria-label="Close">&times;</button>
     <div class="intro-top"></div>
     <div class="intro-body">
+      <span class="intro-wm">Defiant Health</span>
       <span class="intro-eyebrow" id="introEyebrow"></span>
       <h2 class="intro-title" id="introTitle"></h2>
       <p class="intro-text" id="introText"></p>
       <button type="button" class="btn btn-primary" id="introCta">See if you qualify <span class="arrow">&rarr;</span></button>
       <button type="button" class="intro-dismiss" id="introDismiss"></button>
-      <p class="intro-fine" id="introFine"></p>
     </div>
   </div>
 </div>
