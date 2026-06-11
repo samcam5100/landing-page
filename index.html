@@ -856,6 +856,22 @@
   .va-shelf-assess:hover{text-decoration:underline}
   .va-shelf-disc{text-align:center;color:var(--navy);opacity:.6;font-size:.74rem;line-height:1.5;margin:13px auto 0;max-width:560px}
   @media(max-width:640px){.va-shelf{flex-direction:column}}
+
+  /* Lab testing section */
+  .va-lab-card{display:flex;gap:42px;align-items:center;background:#F4F1EC;border-radius:24px;padding:48px;margin-top:38px}
+  .va-lab-left{flex:1}
+  .va-lab-tag{display:inline-block;background:#fff;color:var(--primary-deep);font-size:.7rem;font-weight:700;letter-spacing:.07em;padding:6px 13px;border-radius:20px;margin-bottom:18px}
+  .va-lab-title{font-family:var(--display);font-size:2.3rem;font-weight:800;line-height:1.08;letter-spacing:-.02em;margin:0;color:var(--navy-deep)}
+  .va-lab-titlesub{color:#8a9aa3;font-size:1.5rem;font-weight:600;line-height:1.15;margin:2px 0 22px}
+  .va-lab-bul{list-style:none;margin:0 0 26px;padding:0}
+  .va-lab-bul li{display:flex;gap:11px;align-items:center;color:#3a4751;font-size:1rem;padding:6px 0}
+  .va-lab-ck{flex:none;width:22px;height:22px;border-radius:50%;background:#e7f0f9;color:var(--primary-deep);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800}
+  .va-lab-btn{display:inline-block;background:var(--navy-deep);color:#fff;font-size:1rem;font-weight:700;padding:15px 34px;border-radius:32px;border:none;cursor:pointer;font-family:inherit;transition:background .15s}
+  .va-lab-btn:hover{background:#12304a}
+  .va-lab-phone{width:248px;background:#0e1013;border-radius:42px;padding:9px;box-shadow:0 26px 56px rgba(10,30,46,.30),inset 0 0 0 2px #303338}
+  .va-lab-phone img{display:block;width:100%;border-radius:34px}
+  .va-lab-disc{text-align:center;color:var(--navy);opacity:.6;font-size:.8rem;line-height:1.5;margin:20px auto 0;max-width:640px}
+  @media(max-width:760px){.va-lab-card{flex-direction:column;text-align:center;padding:34px}.va-lab-bul li{justify-content:center}}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1205,6 +1221,25 @@
       </div>
     </div>
   </section>
+
+<section class="va-sec"><div class="wrap">
+  <div class="va-head reveal"><h2>We measure. We don't guess.</h2><p>Your plan starts with a complete picture of your health, not just a number on the scale.</p></div>
+  <div class="va-lab-card reveal">
+    <div class="va-lab-left">
+      <span class="va-lab-tag">150+ BIOMARKERS</span>
+      <h3 class="va-lab-title">Comprehensive labs</h3>
+      <div class="va-lab-titlesub">to see your full picture</div>
+      <ul class="va-lab-bul">
+        <li><span class="va-lab-ck">&#10003;</span> A full baseline panel before you start</li>
+        <li><span class="va-lab-ck">&#10003;</span> Retested during your program to track real progress</li>
+        <li><span class="va-lab-ck">&#10003;</span> Every result reviewed by your licensed provider</li>
+      </ul>
+      <button type="button" class="va-lab-btn" data-cta="lab_testing">Start testing</button>
+    </div>
+    <div class="va-lab-phonewrap"><div class="va-lab-phone"><img src="assets/lab-app.png" alt="Defiant Health biomarker results app screen" loading="lazy"></div></div>
+  </div>
+  <p class="va-lab-disc">App screen shown is for illustrative purposes only. Individual lab results may vary. Lab testing is part of your program and is reviewed by your provider; it is not a standalone diagnostic service and does not replace care from your primary physician.</p>
+</div></section>
 <section class="va-strip">
     <div class="wrap va-strip-in">
       <div class="va-stat">
