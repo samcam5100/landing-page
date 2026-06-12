@@ -791,6 +791,429 @@
   .df-legal-right a:hover{color:#9fb4c9}
   @media(max-width:860px){.df-main{grid-template-columns:1fr 1fr}.df-cap-in{flex-direction:column;align-items:flex-start}}
   @media(max-width:540px){.df-main{grid-template-columns:1fr}.df-bottom-in{flex-direction:column}.df-legal-right{justify-content:flex-start}}
+
+/* grafted science page */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{--page-bg:transparent;--nav-bg:#ffffff;--card-bg:#ffffff;--ink:#0A1E2E;--ink-light:#4a5568;--muted:#8896a7;--accent:#2563B0;--accent-dk:#1E5196;--green:#1a6e50;--teal:#1d9e75;--navy:#0A1E2E;--line:rgba(10,30,46,.10);--font:'Plus Jakarta Sans',system-ui,sans-serif;--serif:'Plus Jakarta Sans',system-ui,sans-serif;}
+
+html { scroll-behavior: smooth; }
+
+
+/* ── ANNOUNCEMENT BAR ── */
+.ann-bar {
+  background: var(--navy);
+  color: rgba(255,255,255,.85);
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 1rem;
+  font-weight: 300;
+  letter-spacing: .01em;
+}
+.ann-bar a { color: #fff; font-weight: 500; text-decoration: underline; }
+.ann-bar .close-ann {
+  position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: rgba(255,255,255,.6); font-size: 18px;
+  cursor: pointer; line-height: 1;
+}
+.ann-wrap { position: relative; display: inline-block; }
+
+/* ── NAV ── */
+.nav-top {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--line);
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+.nav-brand {
+  font-size: 11.5px;
+  letter-spacing: .25em;
+  font-weight: 400;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-actions { display: flex; align-items: center; gap: 1.5rem; }
+.nav-login {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-light);
+  text-decoration: none;
+  letter-spacing: .04em;
+}
+.nav-cta {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  border-radius: 24px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--font);
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: .04em;
+  transition: background .2s, color .2s;
+}
+.nav-cta:hover { background: var(--ink); color: #fff; }
+
+.nav-links-bar {
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--line);
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  gap: 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-links-bar a {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-light);
+  text-decoration: none;
+  letter-spacing: .02em;
+  padding-bottom: 2px;
+  transition: color .2s;
+}
+.nav-links-bar a:hover { color: var(--ink); }
+.nav-links-bar a.sci-on {
+  color: var(--ink);
+  font-weight: 500;
+  border-bottom: 1.5px solid var(--accent);
+}
+
+/* ── PAGE ── */
+.sci-page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem 7rem;
+}
+
+/* ── EYEBROW ── */
+.sci-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10.5px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.sci-eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ── HERO ── */
+.hero-title {
+  font-family: var(--serif);
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.hero-title em { font-style: italic; color: var(--accent); }
+.sci-hero-sub {
+  font-size: 15.5px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.8;
+  max-width: 580px;
+  margin-bottom: 3.5rem;
+}
+
+/* ── STAT ROW ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 5rem;
+}
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+}
+.stat-num {
+  font-family: var(--serif);
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.stat-label {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.stat-source {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: var(--line); margin: 4rem 0; }
+
+/* ── SECTION ── */
+.sec-eyebrow {
+  font-size: 10.5px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.sec-title {
+  font-family: var(--serif);
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.sec-body {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 2rem;
+}
+
+/* ── CHART CARD ── */
+.chart-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.chart-card-label {
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* ── SLIDER ── */
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 1.25rem 0;
+}
+.slider-row label {
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--ink-light);
+  white-space: nowrap;
+}
+.slider-row input[type=range] { flex: 1; accent-color: var(--accent); cursor: pointer; }
+.slider-val {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  min-width: 68px;
+  text-align: right;
+}
+
+/* ── LEGEND ── */
+.legend { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: .5rem; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-light); }
+.legend-swatch { width: 22px; height: 3px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
+
+/* ── MINI CARDS ── */
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 1.5rem;
+}
+.mini-card {
+  background: var(--page-bg);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  text-align: center;
+}
+.mini-num { font-family: var(--serif); font-size: 26px; font-weight: 600; line-height: 1.1; }
+.mini-lbl { font-size: 11.5px; color: var(--muted); margin-top: 4px; font-weight: 300; }
+
+/* ── CITE ── */
+.cite {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.7;
+  background: var(--card-bg);
+}
+.cite b { color: var(--ink-light); font-weight: 500; }
+
+/* ── TWO-COL ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 1rem; }
+
+/* ── MECHANISM CARD ── */
+.mech-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.75rem;
+}
+.mech-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  background: var(--page-bg);
+  border-radius: 24px;
+  padding: 4px;
+}
+.mech-btn {
+  flex: 1;
+  padding: 9px 8px;
+  border-radius: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: var(--font);
+  font-weight: 500;
+  color: var(--muted);
+  transition: all .2s;
+}
+.mech-btn.sci-on   { background: var(--ink);  color: #fff; }
+.mech-btn.sci-ong { background: var(--green); color: #fff; }
+
+.rec-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.rec-dot {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 600; flex-shrink: 0;
+}
+.rec-info { flex: 1; }
+.rec-name { font-size: 13.5px; font-weight: 500; color: var(--ink); }
+.rec-desc { font-size: 11.5px; color: var(--muted); font-weight: 300; margin-top: 1px; }
+.rec-track { height: 6px; background: var(--page-bg); border-radius: 3px; margin-top: 6px; overflow: hidden; }
+.rec-fill  { height: 100%; border-radius: 3px; transition: width .8s cubic-bezier(.4,0,.2,1); }
+.rec-pct   { font-size: 13px; font-weight: 500; color: var(--muted); min-width: 36px; text-align: right; }
+
+.mech-insight {
+  background: var(--page-bg);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-top: .85rem;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ── DOSING CARD ── */
+.dose-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.75rem;
+}
+.dose-card-lbl {
+  font-size: 10.5px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+.dose-slider-row {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;
+}
+.dose-slider-row span { font-size: 13px; color: var(--ink-light); font-weight: 300; }
+.dose-slider-row input[type=range] { flex: 1; accent-color: var(--accent); }
+.dose-val { font-size: 13px; font-weight: 500; color: var(--ink); min-width: 52px; text-align: right; }
+.dose-caption {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-top: 1rem;
+}
+.dose-caption strong { font-weight: 500; color: var(--ink); }
+
+/* ── CTA BAND ── */
+.cta-band {
+  background: var(--navy);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.cta-band-title {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 600;
+  color: #f0f4f8;
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+.cta-band-sub {
+  font-size: 14px;
+  font-weight: 300;
+  color: #7a99b8;
+  line-height: 1.65;
+  max-width: 420px;
+}
+.cta-band-btn {
+  background: #fff;
+  color: var(--navy);
+  border: none;
+  border-radius: 28px;
+  padding: 14px 30px;
+  font-size: 14px;
+  font-family: var(--font);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: .03em;
+  transition: opacity .2s;
+}
+.cta-band-btn:hover { opacity: .88; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 780px) {
+  .hero-title { font-size: 38px; }
+  .stat-row, .two-col, .mini-grid { grid-template-columns: 1fr; }
+  .nav-top, .nav-links-bar { padding: 0 1.25rem; }
+  .sci-page { padding: 3rem 1.25rem 5rem; }
+  .nav-links-bar { gap: 1.25rem; overflow-x: auto; justify-content: flex-start; }
+}
+
+.sci-page{text-align:left}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1119,52 +1542,148 @@
     <a href="faq.html" class="va-tab">FAQ</a>
   </nav></div></div>
 </header>
-<main id="top">
-  <section class="va-sec va-data"><div class="wrap">
-<div class="va-panel is-active" data-panel="science">
-        <div class="va-sci-hero"><div class="lbl"><div class="e">Peptide science</div><div class="t">How a single hormone reshapes appetite and metabolism</div></div></div>
-        <div class="va-page-intro"><h1>The science behind sustainable weight loss</h1><p>Our approach is rooted in clinical research, metabolic science, and evidence-based medicine.</p></div>
-        <div class="va-data-grid">
-          <div class="va-data-card"><div class="big">~<span class="count" data-to="15">0</span>%</div><div class="lead">Average body weight reduction with semaglutide 2.4 mg over 68 weeks, versus about 2% on placebo.</div><div class="src">STEP 1, <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2032183" target="_blank" rel="noopener">New England Journal of Medicine</a>, 2021</div></div>
-          <div class="va-data-card"><div class="big">up to ~<span class="count" data-to="22">0</span>%</div><div class="lead">Average body weight reduction with tirzepatide at the highest dose over 72 weeks, versus about 2% on placebo.</div><div class="src">SURMOUNT-1, <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038" target="_blank" rel="noopener">New England Journal of Medicine</a>, 2022</div></div>
-          <div class="va-data-card"><div class="big"><span class="count" data-to="20">0</span>%</div><div class="lead">Lower risk of major cardiovascular events with semaglutide in adults with overweight or obesity and established heart disease.</div><div class="src">SELECT, <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2307563" target="_blank" rel="noopener">New England Journal of Medicine</a>, 2023</div></div>
-        </div>
-        <p class="va-data-note" style="margin-bottom:44px">These are average results from large clinical trials, in which medication was combined with a reduced-calorie diet and increased physical activity under medical supervision. Individual results vary, and these figures are not a promise of any specific outcome. A licensed provider determines whether any treatment is appropriate for you.</p>
-        <h3 class="va-sci-sub">How GLP-1 medications work</h3>
-        <div class="g3">
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 14c2 0 2-4 4-4s2 4 4 4 2-6 4-6 2 6 4 6" stroke="#2563B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h4>They mimic a natural hormone</h4><p>GLP-1 is a hormone your body releases after eating that helps signal fullness and steady blood sugar.</p></div>
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#2563B0" stroke-width="1.5"/><path d="M8 12h8" stroke="#2563B0" stroke-width="1.6" stroke-linecap="round"/></svg></span><h4>They can ease appetite</h4><p>Medications in this class may help reduce hunger and support portion control when clinically appropriate.</p></div>
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#2563B0" stroke-width="1.5"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6" stroke="#2563B0" stroke-width="1.5"/></svg></span><h4>They work alongside you</h4><p>Best paired with nutrition and activity, and monitored by your provider over time.</p></div>
-        </div>
-        <h3 class="va-sci-sub">Benefits beyond the scale</h3>
-        <div class="g3">
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 15c2 0 2-3 4-3s2 3 4 3 2-4 4-4 2 4 4 4" stroke="#2563B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h4>Steadier blood sugar</h4><p>GLP-1 medications were first developed to help the body manage blood sugar.</p></div>
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z" stroke="#2563B0" stroke-width="1.5" stroke-linejoin="round"/></svg></span><h4>Cardiovascular risk</h4><p>In adults with heart disease and excess weight, semaglutide lowered the risk of major cardiac events.</p></div>
-          <div class="va-sciblk"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#2563B0" stroke-width="1.5"/><path d="M12 12l4-3" stroke="#2563B0" stroke-width="1.6" stroke-linecap="round"/></svg></span><h4>Blood pressure and lipids</h4><p>Weight reduction is often associated with improvements in blood pressure and cholesterol.</p></div>
-        </div>
-        <p class="va-data-note" style="margin-bottom:44px">These potential benefits depend on individual factors and are not guaranteed. Your provider will discuss what may apply to you.</p>
-        
+<main id="top" class="sci-page">
 
-        <div class="va-tind">
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Evidence-based care</div>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Clinical review process</div>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Personalized recommendations</div>
-          <div><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#2563B0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Ongoing support</div>
-        </div>
-        <div class="va-refs va-faq"><details><summary>Scientific references <span class="pl"></span></summary><div class="ans">Peer-reviewed studies include STEP 1 (2021), SURMOUNT-1 (2022), and SELECT (2023), published in the New England Journal of Medicine and linked in the statistics above.</div></details></div>
-        <div class="va-cta-row"><button type="button" class="btn btn-primary" data-cta="science_cta">Begin Your Assessment <span class="arrow">&rarr;</span></button></div>
-      </div>
-  </div></section>
-<section class="va-final" id="start">
-    <div class="wrap">
-      <div class="va-final-panel reveal">
-        <h2 id="finalHeadline">Ready to find out?</h2>
-        <p id="finalSub"></p>
-        <div class="va-final-actions"><button type="button" class="btn btn-primary" data-cta="final" id="finalCta">Check Eligibility <span class="arrow">&rarr;</span></button><a href="tel:8777777647" class="btn btn-ghost">Call 877-777-7647</a></div>
-        <p class="micro" id="finalMicro"></p>
+  <!-- Hero -->
+  <div class="sci-eyebrow">Evidence-based care</div>
+  <h1 class="hero-title">The science behind<br><em>GLP-1 weight loss</em></h1>
+  <p class="sci-hero-sub">GLP-1 medications aren't a shortcut — they're a clinically validated class of drugs with more peer-reviewed evidence behind them than almost any other weight loss intervention in history. Here's what the data actually shows.</p>
+
+  <!-- Stat cards -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-num">~22%</div>
+      <div class="stat-label">average body weight reduction with tirzepatide at highest dose</div>
+      <div class="stat-source">SURMOUNT-1 trial · NEJM 2022</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">~24%</div>
+      <div class="stat-label">average body weight reduction with retatrutide in Phase 2 trial</div>
+      <div class="stat-source">Phase 2 trial · NEJM 2023</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3×</div>
+      <div class="stat-label">more weight lost on average compared to diet and exercise alone</div>
+      <div class="stat-source">Meta-analysis · Obesity Reviews 2023</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Efficacy chart -->
+  <div class="sec-eyebrow">Efficacy</div>
+  <h2 class="sec-title">Weight loss over time — trial data</h2>
+  <p class="sec-body">Adjust your starting weight to see a personalised projection based on clinical trial averages. This is an illustration, not a prediction of your individual results.</p>
+
+  <div class="chart-card">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:1.25rem;">
+      <span class="chart-card-label">Projected weight over 72 weeks</span>
+      <div class="legend">
+        <span class="legend-item"><span class="legend-swatch" style="background:#2563B0;"></span>Tirzepatide</span>
+        <span class="legend-item"><span class="legend-swatch" style="background:#1a6e50;border-top:2px dashed #1a6e50;background:none;width:22px;height:0;border-bottom:none;display:inline-block;vertical-align:middle;"></span>Retatrutide</span>
       </div>
     </div>
-  </section>
+    <div class="slider-row">
+      <label for="wtSlider">Starting weight</label>
+      <input type="range" min="180" max="400" value="250" step="5" id="wtSlider" oninput="updateChart()">
+      <span class="slider-val" id="wtVal">250 lbs</span>
+    </div>
+    <div style="position:relative;width:100%;height:290px;">
+      <canvas id="mainChart" role="img" aria-label="Line chart comparing projected weight loss over 72 weeks for Tirzepatide and Retatrutide based on trial data">Projected weight loss comparison chart.</canvas>
+    </div>
+    <div class="mini-grid">
+      <div class="mini-card">
+        <div class="mini-num" style="color:#2563B0;" id="tirzLoss">—</div>
+        <div class="mini-lbl">Tirzepatide loss</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-num" style="color:#1a6e50;" id="retaLoss">—</div>
+        <div class="mini-lbl">Retatrutide loss</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-num" style="color:#0f1a2b;" id="dietComp">—</div>
+        <div class="mini-lbl">vs diet alone (~5%)</div>
+      </div>
+    </div>
+  </div>
+  <div class="cite"><b>Source:</b> SURMOUNT-1 (tirzepatide, NEJM 2022) and Phase 2 retatrutide trial (NEJM 2023). Data reflects average outcomes at highest studied doses alongside a reduced-calorie diet and exercise. Individual results vary. A licensed provider determines eligibility and appropriate treatment.</div>
+
+  <div class="divider"></div>
+
+  <!-- Mechanism + Dosing -->
+  <div class="sec-eyebrow">Mechanism</div>
+  <h2 class="sec-title">How GLP-1 drugs work in your body</h2>
+  <p class="sec-body">These medications act on multiple systems simultaneously — not just appetite. Select a medication to see which receptors it activates and what each one does in practice.</p>
+
+  <div class="two-col">
+
+    <div class="mech-card">
+      <div class="mech-toggle">
+        <button class="mech-btn sci-on" id="mb-tirz" onclick="setMech('tirz')">Tirzepatide</button>
+        <button class="mech-btn" id="mb-reta" onclick="setMech('reta')">Retatrutide</button>
+      </div>
+      <div class="rec-row">
+        <div class="rec-dot" style="background:#dff0e8;color:#1a4d35;">GLP</div>
+        <div class="rec-info">
+          <div class="rec-name">GLP-1 receptor</div>
+          <div class="rec-desc">Reduces appetite · slows digestion</div>
+          <div class="rec-track"><div class="rec-fill" id="rf-glp" style="background:#1d9e75;width:0%;"></div></div>
+        </div>
+        <div class="rec-pct" id="rp-glp">—</div>
+      </div>
+      <div class="rec-row">
+        <div class="rec-dot" style="background:#dce8f5;color:#1a3d6b;">GIP</div>
+        <div class="rec-info">
+          <div class="rec-name">GIP receptor</div>
+          <div class="rec-desc">Boosts insulin · reduces nausea</div>
+          <div class="rec-track"><div class="rec-fill" id="rf-gip" style="background:#2563B0;width:0%;"></div></div>
+        </div>
+        <div class="rec-pct" id="rp-gip">—</div>
+      </div>
+      <div class="rec-row" id="gcg-row" style="opacity:.28;transition:opacity .35s;">
+        <div class="rec-dot" style="background:#f5ead8;color:#6b3d0a;">GCG</div>
+        <div class="rec-info">
+          <div class="rec-name">Glucagon receptor</div>
+          <div class="rec-desc">Burns fat · reduces liver fat</div>
+          <div class="rec-track"><div class="rec-fill" id="rf-gcg" style="background:#b87a1a;width:0%;"></div></div>
+        </div>
+        <div class="rec-pct" id="rp-gcg">—</div>
+      </div>
+      <div class="mech-insight" id="mech-insight"></div>
+    </div>
+
+    <div class="dose-card">
+      <div class="dose-card-lbl">Why once a week works</div>
+      <div class="dose-slider-row">
+        <span>Weeks of dosing</span>
+        <input type="range" min="1" max="5" value="1" step="1" id="doseSlider" oninput="updateDose()">
+        <span class="dose-val" id="doseVal">1 week</span>
+      </div>
+      <svg id="doseSvg" viewBox="0 0 440 196" style="display:block;width:100%;height:auto;" role="img" aria-label="Chart showing GLP-1 drug level building to a stable steady zone over 5 weeks of once-weekly dosing">
+        <rect x="40" y="60" width="372" height="72" fill="#dff0e8" opacity="0.55" rx="3"/>
+        <text x="408" y="54" text-anchor="end" font-size="9.5" fill="#1a6e50" font-family="'Plus Jakarta Sans',sans-serif" font-weight="500">steady zone</text>
+        <line x1="40" y1="176" x2="412" y2="176" stroke-width="0.5" stroke="#c0c8d0"/>
+        <line x1="40" y1="20"  x2="40"  y2="176" stroke-width="0.5" stroke="#c0c8d0"/>
+        <text x="16" y="104" font-size="9.5" fill="#8896a7" font-family="'Plus Jakarta Sans',sans-serif" transform="rotate(-90 16 104)" text-anchor="middle">drug level</text>
+        <g id="doseMarkers"></g>
+        <path id="dosePath" d="" fill="none" stroke="#2563B0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p class="dose-caption">Each weekly dose tops up the last — levels climb into a <strong>steady zone</strong> rather than spiking and crashing. That stability is why side effects ease as treatment continues.</p>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div>
+      <div class="cta-band-title">Ready to see if this<br>is right for you?</div>
+      <div class="cta-band-sub">Start a free eligibility check. A licensed Defiant Health provider reviews every submission personally — no automated decisions.</div>
+    </div>
+    <button class="cta-band-btn" type="button" data-cta="science_cta">Check my eligibility →</button>
+  </div>
+
 </main>
 <div class="va-sticky">
   <button type="button" class="btn btn-primary" data-cta="sticky">Start Questionnaire <span class="arrow">&rarr;</span></button>
@@ -2022,6 +2541,120 @@ const CONFIG = {
 
 
 })();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+
+var chartInst = null;
+
+function weightCurve(sw, weeks, maxPct) {
+  var labels = [], data = [];
+  var step = Math.max(6, Math.floor(weeks / 10) * 6);
+  for (var w = 0; w <= weeks; w += step) labels.push('Wk ' + w);
+  if (labels[labels.length - 1] !== 'Wk ' + weeks) labels.push('Wk ' + weeks);
+  labels.forEach(function (l, i) {
+    var t = i / (labels.length - 1);
+    var pct = maxPct * (1 - Math.exp(-3.5 * t));
+    data.push(Math.round(sw * (1 - pct / 100)));
+  });
+  return { labels: labels, data: data };
+}
+
+function updateChart() {
+  var sw = parseInt(document.getElementById('wtSlider').value);
+  document.getElementById('wtVal').textContent = sw + ' lbs';
+  var td = weightCurve(sw, 72, 22);
+  var rd = weightCurve(sw, 72, 24);
+  var tLoss = sw - td.data[td.data.length - 1];
+  var rLoss = sw - rd.data[rd.data.length - 1];
+  var mult = Math.round(rLoss / Math.round(sw * 0.05));
+  document.getElementById('tirzLoss').textContent = tLoss + ' lbs';
+  document.getElementById('retaLoss').textContent = rLoss + ' lbs';
+  document.getElementById('dietComp').textContent = mult + '× more';
+  if (chartInst) {
+    chartInst.data.labels = td.labels;
+    chartInst.data.datasets[0].data = td.data;
+    chartInst.data.datasets[1].data = rd.data;
+    chartInst.update('none');
+  } else {
+    chartInst = new Chart(document.getElementById('mainChart'), {
+      type: 'line',
+      data: {
+        labels: td.labels,
+        datasets: [
+          { label: 'Tirzepatide', data: td.data, borderColor: '#2563B0', backgroundColor: 'rgba(63,111,168,0.06)', borderWidth: 2.5, pointRadius: 3, pointBackgroundColor: '#2563B0', fill: true, tension: 0.4 },
+          { label: 'Retatrutide', data: rd.data, borderColor: '#1a6e50', backgroundColor: 'rgba(26,110,80,0.06)', borderWidth: 2.5, borderDash: [7, 4], pointRadius: 3, pointBackgroundColor: '#1a6e50', fill: true, tension: 0.4 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false, bodyFont: { family: "'Plus Jakarta Sans', sans-serif" }, titleFont: { family: "'Plus Jakarta Sans', sans-serif" } } },
+        scales: {
+          y: { grid: { color: 'rgba(15,26,43,0.06)' }, ticks: { font: { size: 12, family: "'Plus Jakarta Sans', sans-serif" }, color: '#8896a7' } },
+          x: { grid: { display: false }, ticks: { font: { size: 12, family: "'Plus Jakarta Sans', sans-serif" }, color: '#8896a7', maxTicksLimit: 10 } }
+        }
+      }
+    });
+  }
+}
+
+var mechData = {
+  tirz: { glp: 85, gip: 80, gcg: 0, insight: 'Tirzepatide is a dual agonist — GLP-1 and GIP. The GIP component helps reduce nausea and enhances insulin response, making it better tolerated than earlier single-agonist GLP-1 medications.' },
+  reta: { glp: 90, gip: 75, gcg: 70, insight: 'Retatrutide adds a third target — the glucagon receptor. This boosts energy expenditure and significantly reduces liver fat, which is why Phase 2 trials showed slightly greater average weight loss than tirzepatide.' }
+};
+
+function setMech(drug) {
+  var m = mechData[drug];
+  setTimeout(function () {
+    document.getElementById('rf-glp').style.width = m.glp + '%';
+    document.getElementById('rf-gip').style.width = m.gip + '%';
+    document.getElementById('rf-gcg').style.width = m.gcg + '%';
+  }, 50);
+  document.getElementById('rp-glp').textContent = m.glp + '%';
+  document.getElementById('rp-gip').textContent = m.gip + '%';
+  document.getElementById('rp-gcg').textContent = m.gcg > 0 ? m.gcg + '%' : 'None';
+  document.getElementById('gcg-row').style.opacity = m.gcg > 0 ? '1' : '0.28';
+  document.getElementById('mech-insight').textContent = m.insight;
+  document.getElementById('mb-tirz').className = 'mech-btn' + (drug === 'tirz' ? ' sci-on' : '');
+  document.getElementById('mb-reta').className = 'mech-btn' + (drug === 'reta' ? ' sci-ong' : '');
+}
+
+var X0=40, X1=412, YBOT=176, YTOP=22, SPAN=X1-X0, YRANGE=YBOT-YTOP, PER=24;
+function getDoseMax() {
+  var lvl = 0;
+  for (var s = 0; s <= 5*PER; s++) { if (s%PER===0) lvl+=58; lvl*=0.958; }
+  return lvl * 1.08;
+}
+var DMAX = getDoseMax();
+
+function buildPath(weeks) {
+  var lvl=0, pts=[], steps=weeks*PER;
+  for (var s=0; s<=steps; s++) { if (s%PER===0) lvl+=58; lvl*=0.958; pts.push(lvl); }
+  return pts.map(function(v,i) {
+    var x = X0 + SPAN*i/steps;
+    var y = YBOT - Math.min(v/DMAX,1)*YRANGE;
+    return (i===0?'M':'L') + x.toFixed(1) + ',' + y.toFixed(1);
+  }).join(' ');
+}
+
+function updateDose() {
+  var w = parseInt(document.getElementById('doseSlider').value);
+  document.getElementById('doseVal').textContent = w + (w===1?' week':' weeks');
+  document.getElementById('dosePath').setAttribute('d', buildPath(w));
+  var marks = '';
+  for (var i=0; i<w; i++) {
+    var x = X0 + SPAN*(i*PER)/(w*PER);
+    marks += '<line x1="'+x.toFixed(1)+'" y1="44" x2="'+x.toFixed(1)+'" y2="176" stroke="#c5d6ea" stroke-width="1" stroke-dasharray="4,3"/>';
+    marks += '<circle cx="'+x.toFixed(1)+'" cy="44" r="4" fill="#2563B0"/>';
+    marks += '<text x="'+x.toFixed(1)+'" y="37" font-size="9.5" fill="#2563B0" font-family="\'Plus Jakarta Sans\',sans-serif" text-anchor="middle" font-weight="500">W'+(i+1)+'</text>';
+  }
+  document.getElementById('doseMarkers').innerHTML = marks;
+}
+
+updateChart();
+setMech('tirz');
+updateDose();
+
 </script>
 </body>
 </html>
