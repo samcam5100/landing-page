@@ -773,6 +773,48 @@
   .vt-trust-row div{display:flex;flex-direction:column}
   .vt-trust-row strong{font-family:var(--display);color:var(--navy-deep);font-size:1.05rem}
   .vt-trust-row span{font-size:.9rem;color:var(--navy);opacity:.8}
+
+  /* df-footer styles */
+  .df-footer{background:#0A1E2E;color:#9fb4c9;font-family:var(--body,'Plus Jakarta Sans'),system-ui,sans-serif;margin-top:auto}
+  .df-wrap{max-width:1200px;margin:0 auto;padding:0 40px}
+  .df-cap{border-bottom:1px solid rgba(148,178,214,.16)}
+  .df-cap-in{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding-top:30px;padding-bottom:30px}
+  .df-cap-text h3{font-family:var(--wordmark,'Cormorant Garamond'),Georgia,serif;font-size:22px;font-weight:600;color:#f4f7fb;margin:0 0 4px}
+  .df-cap-text p{font-size:13.5px;color:#9fb4c9;max-width:420px;line-height:1.5;margin:0}
+  .df-cap-form{display:flex;gap:8px;flex-wrap:wrap}
+  .df-cap-form input{background:rgba(255,255,255,.06);border:1px solid rgba(148,178,214,.16);border-radius:24px;padding:11px 18px;font-size:13.5px;font-family:inherit;color:#f4f7fb;outline:none;width:240px;transition:border-color .2s}
+  .df-cap-form input::placeholder{color:rgba(148,178,214,.5)}
+  .df-cap-form input:focus{border-color:#5bc9e7}
+  .df-cap-form button{background:#2563B0;color:#fff;border:none;border-radius:24px;padding:11px 22px;font-size:13.5px;font-family:inherit;font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap}
+  .df-cap-form button:hover{background:#1E5196}
+  .df-main{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:36px 52px;padding-top:48px;padding-bottom:36px}
+  .df-brand-name{font-family:var(--wordmark,'Cormorant Garamond'),Georgia,serif;text-transform:uppercase;letter-spacing:.2em;font-weight:600;font-size:1.05rem;color:#f4f7fb;margin-bottom:12px}
+  .df-brand-desc{font-size:13.5px;color:#9fb4c9;line-height:1.65;margin:0 0 16px;max-width:300px}
+  .df-brand-cta{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:#5bc9e7;text-decoration:none;margin-bottom:20px;transition:opacity .2s}
+  .df-brand-cta:hover{opacity:.75}
+  .df-brand-cta svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .df-trust{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .df-trust li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#9fb4c9}
+  .df-trust li svg{width:15px;height:15px;fill:none;stroke:#5bc9e7;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+  .df-col-title{font-size:11px;letter-spacing:.16em;font-weight:700;color:#f4f7fb;text-transform:uppercase;margin-bottom:16px}
+  .df-col a{display:block;font-size:13.5px;color:#9fb4c9;text-decoration:none;margin-bottom:10px;transition:color .2s}
+  .df-col a:hover{color:#f4f7fb}
+  .df-phone{display:flex;align-items:center;gap:7px;font-size:13.5px;color:#9fb4c9;margin-bottom:10px}
+  .df-phone svg{width:14px;height:14px;fill:none;stroke:#9fb4c9;stroke-width:2;flex-shrink:0}
+  .df-phone a{display:inline;margin:0;color:#9fb4c9}
+  .df-phone a:hover{color:#f4f7fb}
+  .df-address{display:flex;align-items:flex-start;gap:7px;font-size:13px;color:#9fb4c9;line-height:1.55}
+  .df-address svg{width:14px;height:14px;fill:none;stroke:#9fb4c9;stroke-width:2;flex-shrink:0;margin-top:2px}
+  .df-address a{display:inline-block;font-size:12px;color:#5bc9e7;text-decoration:none;margin:4px 0 0}
+  .df-address a:hover{opacity:.75}
+  .df-bottom{border-top:1px solid rgba(148,178,214,.16)}
+  .df-bottom-in{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
+  .df-legal-left{font-size:12px;color:rgba(148,178,214,.55);line-height:1.65;max-width:540px}
+  .df-legal-right{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:flex-end}
+  .df-legal-right a{font-size:12px;color:rgba(148,178,214,.55);text-decoration:none;white-space:nowrap;transition:color .2s}
+  .df-legal-right a:hover{color:#9fb4c9}
+  @media(max-width:860px){.df-main{grid-template-columns:1fr 1fr}.df-cap-in{flex-direction:column;align-items:flex-start}}
+  @media(max-width:540px){.df-main{grid-template-columns:1fr}.df-bottom-in{flex-direction:column}.df-legal-right{justify-content:flex-start}}
 </style>
 <style>
   :root { --blush:#E7EDF6; --blush-deep:#2563B0; --sage:#CFE0D6; }
@@ -1251,46 +1293,68 @@
   <button type="button" class="btn btn-primary" data-cta="sticky">See if you qualify <span class="arrow">&rarr;</span></button>
 </div>
 <a class="va-textus" href="sms:8777777647" aria-label="Text us"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H8l-4 3V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Text us</a>
-<footer class="va-footer">
-  <div class="wrap">
-    <div class="va-footer-top">
-      <div class="va-footer-brand">
-        <div class="va-footer-mark">Defiant Health</div>
-        <p>Medically guided weight loss, built around you. A concierge medical practice in Lisle, Illinois.</p>
-        <a class="va-footer-cta" href="index.html#start">Get started &rarr;</a>
-      </div>
-      <div class="va-footer-cols">
-        <div class="va-fcol">
-          <h4>Learn</h4>
-          <a href="learn.html">The new generation</a>
-          <a href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide</a>
-          <a href="learn-eating-on-glp1.html">What to eat on a GLP-1</a>
-          <a href="learn-glp1-side-effects.html">Managing side effects</a>
-        </div>
-        <div class="va-fcol">
-          <h4>Tools</h4>
-          <a href="tools.html#bmi">BMI calculator</a>
-          <a href="tools.html#calories">Daily calories burned</a>
-          <a href="tools.html#deficit">Caloric deficit</a>
-          <a href="tools.html#protein">Protein calculator</a>
-          <a href="tools.html#water">Daily water intake</a>
-        </div>
-        <div class="va-fcol">
-          <h4>Defiant Health</h4>
-          <a href="how-it-works.html">How it works</a>
-          <a href="treatments.html">Treatments</a>
-          <a href="the-science.html">The science</a>
-          <a href="faq.html">FAQ</a>
-          <a href="tel:8777777647">877 777 7647</a>
-        </div>
-      </div>
+<footer class="df-footer">
+  <div class="df-cap"><div class="df-wrap df-cap-in">
+    <div class="df-cap-text">
+      <h3>Not ready to start yet?</h3>
+      <p>Get our free GLP-1 guide, what to expect, how it works, and the questions to ask your provider.</p>
     </div>
-    <div class="va-footer-bottom">
-      <span>&copy; <span id="footerYear"></span> Defiant Health. 5100 Lincoln Ave, Lisle, IL 60532.</span>
-      <span class="va-footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="telehealth-consent.html">Telehealth Consent</a><a href="hipaa-notice.html">HIPAA Notice</a><a href="sms-terms.html">SMS Terms</a><a href="membership-terms.html">Billing</a></span>
+    <form class="df-cap-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email address" autocomplete="email" aria-label="Email address">
+      <button type="submit">Send me the guide</button>
+    </form>
+  </div></div>
+
+  <div class="df-wrap df-main">
+    <div class="df-col df-brandcol">
+      <div class="df-brand-name">Defiant Health</div>
+      <p class="df-brand-desc">Medically guided weight loss, built around you. A concierge medical practice in Lisle, Illinois.</p>
+      <a href="index.html#start" class="df-brand-cta">Get started <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <ul class="df-trust">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L3 7v6c0 5.25 3.75 10.15 9 11.25C17.25 23.15 21 18.25 21 13V7L12 2z"/><path d="M9 12l2 2 4-4"/></svg>Licensed providers, Illinois</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>HIPAA compliant</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Concierge practice, Lisle, IL</li>
+      </ul>
     </div>
-    <p class="va-footer-disc">This site does not provide medical advice and is not a substitute for consultation with a qualified provider.</p>
+    <div class="df-col">
+      <div class="df-col-title">Learn</div>
+      <a href="learn-questions-to-ask.html">Questions to ask your provider</a>
+      <a href="learn-first-30-days.html">Your first 30 days</a>
+      <a href="learn-eating-on-glp1.html">What to eat on a GLP-1</a>
+      <a href="learn-glp1-side-effects.html">Managing side effects</a>
+      <a href="learn-weight-loss-plateau.html">Why your weight loss slowed</a>
+      <a href="learn-glp1-and-alcohol.html">GLP-1 and alcohol</a>
+      <a href="learn-talking-to-family.html">Talking to family about GLP-1</a>
+      <a href="learn-tirzepatide-vs-retatrutide.html">Tirzepatide vs retatrutide</a>
+    </div>
+    <div class="df-col">
+      <div class="df-col-title">Tools</div>
+      <a href="tools.html#bmi">BMI calculator</a>
+      <a href="tools.html#calories">Daily calories burned</a>
+      <a href="tools.html#deficit">Caloric deficit</a>
+      <a href="tools.html#protein">Protein calculator</a>
+      <a href="tools.html#water">Daily water intake</a>
+    </div>
+    <div class="df-col">
+      <div class="df-col-title">Defiant Health</div>
+      <a href="how-it-works.html">How it works</a>
+      <a href="treatments.html">Treatments</a>
+      <a href="the-science.html">The science</a>
+      <a href="faq.html">FAQ</a>
+    </div>
   </div>
+
+  <div class="df-bottom"><div class="df-wrap df-bottom-in">
+    <div class="df-legal-left">&copy; <span id="footerYear"></span> Defiant Health. 5100 Lincoln Ave, Lisle, IL 60532.<br>This site does not provide medical advice and is not a substitute for consultation with a qualified provider. Not everyone will be a candidate for treatment. Individual results vary.</div>
+    <nav class="df-legal-right" aria-label="Legal links">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of service</a>
+      <a href="telehealth-consent.html">Telehealth consent</a>
+      <a href="hipaa-notice.html">HIPAA notice</a>
+      <a href="sms-terms.html">SMS terms</a>
+      <a href="membership-terms.html">Billing</a>
+    </nav>
+  </div></div>
 </footer>
 <!-- ============ POPUP / MODAL QUESTIONNAIRE ============ -->
 <div class="intro-overlay" id="introOverlay" role="dialog" aria-modal="true" aria-labelledby="introTitle" aria-hidden="true">
